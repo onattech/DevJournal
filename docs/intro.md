@@ -30,3 +30,13 @@ The `pnpm run start` command builds your website locally and serves it through a
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
 
 ## Customize your site
+
+Update the following in the `docusaurus.config.js` file.
+
+-   title
+-   tagline
+-   favicon
+-   url
+-   baseUrl
+-   organizationName
+-   projectName
