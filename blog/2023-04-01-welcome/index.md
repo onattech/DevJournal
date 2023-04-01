@@ -7,4 +7,4 @@ tags: [hello]
 
 **Welcome!**
 
-Be on the lookout for upcoming blogs posts.
+Be on the lookout for upcoming blog posts.
