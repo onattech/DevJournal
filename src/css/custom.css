@@ -28,3 +28,12 @@
     --ifm-color-primary-lightest: #4fddbf;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Sticky Media */
+.sticky-video-modal {
+    width: 350px;
+    height: 250px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 0 20px rgb(0, 0, 0 / 80%);
+}
