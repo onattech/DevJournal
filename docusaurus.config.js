@@ -67,6 +67,8 @@ const config = {
         ],
     ],
 
+    stylesheets: ["https://fonts.googleapis.com/css?family=Montserrat:400,700"],
+
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
