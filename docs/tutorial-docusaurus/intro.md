@@ -40,3 +40,11 @@ Update the following in the `docusaurus.config.js` file.
 -   baseUrl
 -   organizationName
 -   projectName
+
+## Custom domain
+
+Add `CNAME` file to `/static` directory.
+
+```
+mywebsite.com
+```
