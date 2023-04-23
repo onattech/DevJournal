@@ -13,6 +13,30 @@ export default function Home(): JSX.Element {
         themeToggle.style.display = "none"
     }, [])
 
+    // Github stars for Datapane
+    const [stars, setStars] = React.useState(null)
+    React.useEffect(() => {
+        let isMounted = true
+
+        const fetchData = async () => {
+            const data = await fetch(
+                `https://api.github.com/repos/dataplane-app/dataplane`
+            )
+            await new Promise((r) => setTimeout(r, 1000))
+            const json = await data.json()
+
+            if (isMounted) {
+                setStars(json.watchers_count)
+            }
+        }
+
+        fetchData().catch(console.error)
+
+        return () => {
+            isMounted = false
+        }
+    }, [])
+
     return (
         <Layout title="Onat" description="My portfoio and dev insights">
             <main>
@@ -77,7 +101,7 @@ export default function Home(): JSX.Element {
                                             rel="noreferrer"
                                             target="_blank"
                                             className={styles.buttonAbout}
-                                            href="assets/resume.pdf"
+                                            href="/resume.pdf"
                                         >
                                             {" "}
                                             View Resume{" "}
@@ -120,22 +144,22 @@ export default function Home(): JSX.Element {
                                 >
                                     <div className="project-wrapper__text load-hidden">
                                         <h3 className={styles.projectTitle}>
-                                            Dataplane
+                                            Dataplane ({stars} Github 🌟️s)
                                         </h3>
                                         <div>
                                             <p style={{ textAlign: "left" }}>
-                                                Currently working as a
-                                                full-stack engineer at
-                                                Dataplane. Dataplane is an open
-                                                source Airflow inspired data
-                                                platform to automate, schedule
-                                                and design data pipelines and
-                                                workflows written in Go. I am
-                                                responsible with all things
-                                                frontend and setting up GraphQL
-                                                endpoints, writing tests and
-                                                more in the backend with Go.
-                                                Check out my{" "}
+                                                I have helped build and
+                                                currently maintaining Dataplane
+                                                as a full-stack engineer.
+                                                Dataplane is an open source
+                                                Airflow inspired data platform
+                                                to automate, schedule and design
+                                                data pipelines and workflows
+                                                written in Go. I am responsible
+                                                with all things frontend and
+                                                setting up GraphQL endpoints,
+                                                writing tests and more in the
+                                                backend with Go. Check out my{" "}
                                                 <a
                                                     rel="noreferrer"
                                                     href="https://github.com/dataplane-app/dataplane/graphs/contributors"
