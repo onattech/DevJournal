@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://docs.onatim.com/blog</id>
-    <title>Dev Journal Blog</title>
+    <title>Developer Blog</title>
     <updated>2023-04-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://docs.onatim.com/blog"/>
-    <subtitle>Dev Journal Blog</subtitle>
+    <subtitle>Developer Blog</subtitle>
     <icon>http://docs.onatim.com/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
