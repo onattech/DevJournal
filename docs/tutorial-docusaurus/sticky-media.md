@@ -4,6 +4,16 @@ sidebar_position: 3
 
 # Sticky media
 
+:::caution
+
+Only works if page is loaded directly going to the address of the page with sticky media. It doesn't work coming from another page on the same site.
+
+#### Example
+
+If you refresh this page, it will work. If you click to this page's link from the landing page, it won't.
+
+:::
+
 You may add a sticky video by giving `sticky-popup` class to an `a` tag.
 
 ```html {4}
