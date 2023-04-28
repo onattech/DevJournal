@@ -71,6 +71,8 @@ const config = {
         "https://fonts.googleapis.com/css?family=Montserrat:400,500,700",
     ],
 
+    plugins: ["docusaurus-plugin-smartlook"],
+
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -145,6 +147,9 @@ const config = {
             prism: {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
+            },
+            smartlook: {
+                projectKey: "aed0ff7d5231021cc0aa4ebad22a5354e325aed6",
             },
         }),
 }
