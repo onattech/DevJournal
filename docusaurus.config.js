@@ -4,6 +4,8 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github")
 const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 
+require("dotenv").config()
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: "Developer",
@@ -23,6 +25,14 @@ const config = {
 
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
+
+    // customFields are used to pass env variables to Docusaurus' useDocusaurusContext
+    // hook which is used for importing env variables in the components
+    customFields: {
+        EMAILJS_SERVER_ID: process.env.EMAILJS_SERVER_ID,
+        EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
+        EMAILJS_PUBLIC_KEY: process.env.EMAILJS_PUBLIC_KEY,
+    },
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
