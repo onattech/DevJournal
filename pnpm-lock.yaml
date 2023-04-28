@@ -13,15 +13,21 @@ dependencies:
   '@docusaurus/types':
     specifier: ^2.4.0
     version: 2.4.0(react-dom@17.0.2)(react@17.0.2)
+  '@mdi/js':
+    specifier: ^7.2.96
+    version: 7.2.96
+  '@mdi/react':
+    specifier: ^1.6.1
+    version: 1.6.1
   '@mdx-js/react':
     specifier: ^1.6.22
     version: 1.6.22(react@17.0.2)
+  '@stackql/docusaurus-plugin-smartlook':
+    specifier: ^1.0.2
+    version: 1.0.2
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
-  docusaurus-plugin-smartlook:
-    specifier: ^1.0.2
-    version: 1.0.2
   prism-react-renderer:
     specifier: ^1.3.5
     version: 1.3.5(react@17.0.2)
@@ -2426,6 +2432,16 @@ packages:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: false
 
+  /@mdi/js@7.2.96:
+    resolution: {integrity: sha512-paR9M9ZT7rKbh2boksNUynuSZMHhqRYnEZOm/KrZTjQ4/FzyhjLHuvw/8XYzP+E7fS4+/Ms/82EN1pl/OFsiIA==}
+    dev: false
+
+  /@mdi/react@1.6.1:
+    resolution: {integrity: sha512-4qZeDcluDFGFTWkHs86VOlHkm6gnKaMql13/gpIcUQ8kzxHgpj31NuCkD8abECVfbULJ3shc7Yt4HJ6Wu6SN4w==}
+    dependencies:
+      prop-types: 15.8.1
+    dev: false
+
   /@mdx-js/mdx@1.6.22:
     resolution: {integrity: sha512-AMxuLxPz2j5/6TpF/XSdKpQP1NlG0z11dFOlq+2IP/lSgl11GY8ji6S/rgsViN/L0BDvHvUMruRb7ub+24LUYA==}
     dependencies:
@@ -2522,6 +2538,10 @@ packages:
       eval: 0.1.8
       p-map: 4.0.0
       webpack-sources: 3.2.3
+    dev: false
+
+  /@stackql/docusaurus-plugin-smartlook@1.0.2:
+    resolution: {integrity: sha512-W2451Vc22jsrH+9TkBoXMjBU5Megek8f9Ba8+DzvSP+s+XlLXQgr00me/7vt05XafFrdUyP0/SE5cmV9SrS9CA==}
     dev: false
 
   /@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.21.3):
@@ -4197,11 +4217,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.4
-    dev: false
-
-  /docusaurus-plugin-smartlook@1.0.2:
-    resolution: {integrity: sha512-HKOavP16LMWsdZ6xpEqGecIweButfZ3hteCy6FZb1+s8c5b3hFsn9n1ohChAC1B1KETQZG5OhmQ270C0ak06Rg==}
-    deprecated: docusaurus-plugin-smartlook is now available at @stackql/docusaurus-plugin-smartlook
     dev: false
 
   /dom-converter@0.2.0:

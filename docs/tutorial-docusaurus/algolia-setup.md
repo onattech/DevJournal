@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Algolia setup
@@ -58,8 +58,20 @@ Make a file in the root directory called `config.json` and paste the below code 
     "strip_chars": " .,;:#",
     "custom_settings": {
         "separatorsToIndex": "_",
-        "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
-        "attributesToRetrieve": ["hierarchy", "content", "anchor", "url", "url_without_anchor", "type"]
+        "attributesForFaceting": [
+            "language",
+            "version",
+            "type",
+            "docusaurus_tag"
+        ],
+        "attributesToRetrieve": [
+            "hierarchy",
+            "content",
+            "anchor",
+            "url",
+            "url_without_anchor",
+            "type"
+        ]
     },
     "conversation_id": ["833762294"],
     "nb_hits": 46250
