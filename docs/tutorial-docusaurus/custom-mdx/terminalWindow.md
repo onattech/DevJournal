@@ -2,11 +2,11 @@
 sidebar_position: 2
 ---
 
-# CLI
+# Terminal Window
 
 This is a custom code block designed to look like a terminal window.
 
-<cliWindow>
+<terminalWindow>
 
 ```text {1,5}
 ~/myLambda $ ./gccli lambda public
@@ -19,7 +19,7 @@ This is a custom code block designed to look like a terminal window.
 $ █
 ```
 
-</cliWindow>
+</terminalWindow>
 
 :::info requirements
 
@@ -34,7 +34,7 @@ $ █
 ### Usage
 
 ````
-<cliWindow>
+<terminalWindow>
 
 ```text {1,5}
 ~/myLambda $ ./gccli lambda public
@@ -47,6 +47,6 @@ $ █
 $ █
 ```
 
-</cliWindow>
+</terminalWindow>
 
 ````

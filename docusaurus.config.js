@@ -149,7 +149,7 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
             smartlook: {
-                projectKey: "aed0ff7d5231021cc0aa4ebad22a5354e325aed6",
+                projectKey: "0621118a02f7419687494f098626b756fecedbd0",
             },
         }),
 }
