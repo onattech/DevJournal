@@ -12,17 +12,26 @@ jobs:
         name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
         steps:
-            - run: echo "COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-6)" >> $GITHUB_ENV
-            - run: echo $COMMIT_HASH
             - uses: actions/checkout@v3
             - uses: pnpm/action-setup@v2.2.4
               with:
                   version: 7
 
-            - name: Install dependencies
+            - name: 🗜️ Install dependencies
               run: pnpm install
-            - name: Build website
+            - name: 🏗 Build website
               run: pnpm run build
+
+            - name: 💾 Store commit hash as an enviromment variable
+              run: echo "COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
+            - name: 🗃 Add commit hash to <html> tag in index.html
+              run: |
+                  sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
+
+            # - name: Show GitHub context
+            #   env:
+            #       GITHUB_CONTEXT: ${{ toJson(github) }}
+            #   run: echo "$GITHUB_CONTEXT"
 
             # Popular action to deploy to GitHub Pages:
             # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -37,6 +46,6 @@ jobs:
                   # https://github.com/actions/checkout/issues/13#issuecomment-724415212
                   # The GH actions bot is used by default if you didn't specify the two fields.
                   # You can swap them out with your own user credentials.
-                  user_name: onattech
-                  user_email: onatim@protonmail.com
+                  user_name: ${{ github.event.pusher.name }}
+                  user_email: ${{ github.event.pusher.email }}
 # Give permission to workflow => https://stackoverflow.com/a/75308228
