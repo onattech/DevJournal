@@ -81,7 +81,7 @@ const config = {
         "https://fonts.googleapis.com/css?family=Montserrat:400,500,700",
     ],
 
-    plugins: ["@stackql/docusaurus-plugin-smartlook"],
+    plugins: ["@stackql/docusaurus-plugin-smartlook", "./commitHash.js"],
 
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
