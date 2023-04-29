@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[237],{9913:(e,t,a)=>{a.r(t),a.d(t,{GlobalStyle:()=>d,default:()=>c});var n=a(9496),i=a(5493);const r=a.p+"assets/images/profile-5bc73eac6f8211920b1ff8bf5a029047.jpg",l=a.p+"assets/images/dataplane-c22c1910ba039744ea19f0086b455781.png";var o=a(9004),m=a(8579);const d=o.vJ`
+"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[237],{9913:(e,t,a)=>{a.r(t),a.d(t,{GlobalStyle:()=>m,default:()=>d});var n=a(9496),i=a(5493);const r=a.p+"assets/images/profile-5bc73eac6f8211920b1ff8bf5a029047.jpg",l=a.p+"assets/images/dataplane-c22c1910ba039744ea19f0086b455781.png";var o=a(9004);const m=o.vJ`
   :root {
     scroll-behavior: smooth;
   }
@@ -18,13 +18,13 @@
   a:visited {
     text-decoration: none;
   }
-`;function c(){const{siteConfig:e}=(0,m.Z)(),t=e.customFields.COMMIT_HASH;n.useLayoutEffect((()=>{document.querySelector("div.navbar__items:nth-child(2) > div").style.display="none"}),[]);const[a,o]=n.useState(null);return n.useEffect((()=>{let e=!0;return(async()=>{const t=await fetch("https://api.github.com/repos/dataplane-app/dataplane");await new Promise((e=>setTimeout(e,1e3)));const a=await t.json();e&&o(a.watchers_count)})().catch(console.error),()=>{e=!1}}),[]),n.createElement(i.Z,{title:"Onat",description:"My portfoio and dev insights"},n.createElement(d,null),n.createElement("main",null,n.createElement("span",{style:{color:"#fff"}},t),n.createElement(s,null,n.createElement(g,null,n.createElement(h,null,"Hi, my name is ",n.createElement(p,null,"Onat"),n.createElement("br",null),"I'm a full-stack Developer."),n.createElement(f,null,n.createElement(b,{rel:"noreferrer",href:"#about"},"Know more")))),n.createElement("div",{id:"about",style:{marginTop:"-60px",position:"absolute"}}),n.createElement(x,null,n.createElement(g,null,n.createElement(w,null,"About me"),n.createElement(y,null,n.createElement(E,null,n.createElement(k,null,n.createElement(v,{alt:"Profile Image",height:"auto",width:"300px",src:r}))),n.createElement(E,null,n.createElement(P,null,n.createElement(Z,null,"I am Onat, a US citizen. I speak English and Turkish fluently and Arabic at an acceptable level. I am a full stack Web Developer with network engineering background. The stack that I am most comfortable with is React in the frontend and Go in the backend."),n.createElement(Z,null,"Currently focusing on improving my skills on Go and learning docker and kubernetes."),n.createElement(z,null,n.createElement(_,{rel:"noreferrer",target:"_blank",href:"/resume.pdf"},"View Resume"," "),n.createElement(_,{rel:"noreferrer",target:"_blank",style:{marginLeft:"20px"},href:"https://github.com/onattech"},"Github Profile"))))))),n.createElement(S,null,n.createElement(g,null,n.createElement("div",{style:{marginBottom:"9.375rem"}},n.createElement(w,{style:{color:"#272341"}},"Projects"),n.createElement(y,null,n.createElement(I,null,n.createElement(C,null,n.createElement(G,null,"Dataplane (",a," Github \ud83c\udf1f\ufe0fs)"),n.createElement("div",null,n.createElement("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"}},"I have helped build and currently maintaining Dataplane as a full-stack engineer. Dataplane is an open source Airflow inspired data platform to automate, schedule and design data pipelines and workflows written in Go. I am responsible with all things frontend and setting up GraphQL endpoints, writing tests and more in the backend with Go. Check out my"," ",n.createElement("a",{rel:"noreferrer",href:"https://github.com/dataplane-app/dataplane/graphs/contributors",target:"_blank"},"contributions."))),n.createElement(M,{rel:"noreferrer",target:"_blank",href:"https://dataplane.app/"},"See Live"),n.createElement(T,{rel:"noreferrer",target:"_blank",href:"https://github.com/dataplane-app/dataplane"},"Source Code"))),n.createElement(j,null,n.createElement("div",{style:{margin:"0 auto"}},n.createElement("div",null,n.createElement("img",{alt:"Project Image",src:l})))))))),n.createElement(A,null,n.createElement(g,{style:{maxWidth:"480px"}},n.createElement(y,null,n.createElement(w,null,"Contact"),n.createElement("form",{action:"https://formspree.io/xqkyrbrr",method:"POST",style:{textAlign:"left",fontSize:"1.3rem"}},n.createElement("label",{htmlFor:"name",style:{display:"inline-block",width:"80px"}},"Name"),n.createElement("input",{type:"text",name:"name",id:"name"}),n.createElement("br",null),n.createElement("label",{htmlFor:"_replyto",style:{marginTop:"10px",display:"inline-block",width:"80px"}},"Email"),n.createElement("input",{type:"email",name:"_replyto",id:"email",style:{marginBottom:"20px"}}),n.createElement("br",null),n.createElement("label",{htmlFor:"textarea",id:"textarealabel"},"How may I help you?"),n.createElement("textarea",{name:"body",style:{width:"100%"},rows:8,cols:50}),n.createElement("br",null),n.createElement("button",{value:"Submit",style:{border:"none",borderRadius:"3px",fontSize:"1rem",marginTop:"10px",padding:"10px",fontFamily:"Montserrat,sans-serif"}},"Submit")))))))}const p=o.ZP.span`
+`;function d(){n.useLayoutEffect((()=>{document.querySelector("div.navbar__items:nth-child(2) > div").style.display="none"}),[]);const[e,t]=n.useState(null);return n.useEffect((()=>{let e=!0;return(async()=>{const a=await fetch("https://api.github.com/repos/dataplane-app/dataplane");await new Promise((e=>setTimeout(e,1e3)));const n=await a.json();e&&t(n.watchers_count)})().catch(console.error),()=>{e=!1}}),[]),n.createElement(i.Z,{title:"Onat",description:"My portfoio and dev insights"},n.createElement(m,null),n.createElement("main",null,n.createElement(p,null,n.createElement(s,null,n.createElement(g,null,"Hi, my name is ",n.createElement(c,null,"Onat"),n.createElement("br",null),"I'm a full-stack Developer."),n.createElement(h,null,n.createElement(u,{rel:"noreferrer",href:"#about"},"Know more")))),n.createElement("div",{id:"about",style:{marginTop:"-60px",position:"absolute"}}),n.createElement(b,null,n.createElement(s,null,n.createElement(x,null,"About me"),n.createElement(w,null,n.createElement(k,null,n.createElement(y,null,n.createElement(E,{alt:"Profile Image",height:"auto",width:"300px",src:r}))),n.createElement(k,null,n.createElement(v,null,n.createElement(P,null,"I am Onat, a US citizen. I speak English and Turkish fluently and Arabic at an acceptable level. I am a full stack Web Developer with network engineering background. The stack that I am most comfortable with is React in the frontend and Go in the backend."),n.createElement(P,null,"Currently focusing on improving my skills on Go and learning docker and kubernetes."),n.createElement(Z,null,n.createElement(z,{rel:"noreferrer",target:"_blank",href:"/resume.pdf"},"View Resume"," "),n.createElement(z,{rel:"noreferrer",target:"_blank",style:{marginLeft:"20px"},href:"https://github.com/onattech"},"Github Profile"))))))),n.createElement(_,null,n.createElement(s,null,n.createElement("div",{style:{marginBottom:"9.375rem"}},n.createElement(x,{style:{color:"#272341"}},"Projects"),n.createElement(w,null,n.createElement(S,null,n.createElement(j,null,n.createElement(G,null,"Dataplane (",e," Github \ud83c\udf1f\ufe0fs)"),n.createElement("div",null,n.createElement("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"}},"I have helped build and currently maintaining Dataplane as a full-stack engineer. Dataplane is an open source Airflow inspired data platform to automate, schedule and design data pipelines and workflows written in Go. I am responsible with all things frontend and setting up GraphQL endpoints, writing tests and more in the backend with Go. Check out my"," ",n.createElement("a",{rel:"noreferrer",href:"https://github.com/dataplane-app/dataplane/graphs/contributors",target:"_blank"},"contributions."))),n.createElement(T,{rel:"noreferrer",target:"_blank",href:"https://dataplane.app/"},"See Live"),n.createElement(C,{rel:"noreferrer",target:"_blank",href:"https://github.com/dataplane-app/dataplane"},"Source Code"))),n.createElement(I,null,n.createElement("div",{style:{margin:"0 auto"}},n.createElement("div",null,n.createElement("img",{alt:"Project Image",src:l})))))))),n.createElement(M,null,n.createElement(s,{style:{maxWidth:"480px"}},n.createElement(w,null,n.createElement(x,null,"Contact"),n.createElement("form",{action:"https://formspree.io/xqkyrbrr",method:"POST",style:{textAlign:"left",fontSize:"1.3rem"}},n.createElement("label",{htmlFor:"name",style:{display:"inline-block",width:"80px"}},"Name"),n.createElement("input",{type:"text",name:"name",id:"name"}),n.createElement("br",null),n.createElement("label",{htmlFor:"_replyto",style:{marginTop:"10px",display:"inline-block",width:"80px"}},"Email"),n.createElement("input",{type:"email",name:"_replyto",id:"email",style:{marginBottom:"20px"}}),n.createElement("br",null),n.createElement("label",{htmlFor:"textarea",id:"textarealabel"},"How may I help you?"),n.createElement("textarea",{name:"body",style:{width:"100%"},rows:8,cols:50}),n.createElement("br",null),n.createElement("button",{value:"Submit",style:{border:"none",borderRadius:"3px",fontSize:"1rem",marginTop:"10px",padding:"10px",fontFamily:"Montserrat,sans-serif"}},"Submit")))))))}const c=o.ZP.span`
     background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0000;
-`,s=o.ZP.section`
+`,p=o.ZP.section`
     align-items: center;
     background: #fff;
     border-bottom: 0;
@@ -40,7 +40,7 @@
     @media (max-width: 576px) {
         padding: 0 1rem;
     }
-`,g=o.ZP.div`
+`,s=o.ZP.div`
     width: 100%;
     padding-right: 0.46875rem;
     padding-left: 0.46875rem;
@@ -66,7 +66,7 @@
     @media (min-width: 1400px) {
         max-width: 1320px;
     }
-`,h=o.ZP.h1`
+`,g=o.ZP.h1`
     visibility: visible;
 
     font-size: 2.1875rem;
@@ -99,13 +99,13 @@
     @media (min-width: 1400px) {
         font-size: 3.5rem;
     }
-`,f=o.ZP.p`
+`,h=o.ZP.p`
     display: flex;
 
     @media (max-width: 992px) {
         justify-content: center;
     }
-`,u=o.ZP.a`
+`,f=o.ZP.a`
     font-family: Montserrat, sans-serif;
 
     display: inline-block;
@@ -126,7 +126,7 @@
         width: 0;
         z-index: -1;
     }
-`,b=(0,o.ZP)(u)`
+`,u=(0,o.ZP)(f)`
     font-size: 1.5rem;
     @media (max-width: 600px) {
         font-size: 1.25rem;
@@ -153,7 +153,7 @@
             width: 100%;
         }
     }
-`,x=o.ZP.section`
+`,b=o.ZP.section`
     padding: 3.125rem 0;
 
     background-color: #02aab0;
@@ -169,7 +169,7 @@
         clip-path: none;
         height: 100%;
     }
-`,w=o.ZP.h2`
+`,x=o.ZP.h2`
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0 0 2.8125rem;
@@ -178,7 +178,7 @@
     @media (max-width: 600px) {
         font-size: 1.75rem;
     }
-`,y=o.ZP.div`
+`,w=o.ZP.div`
     --bs-gutter-x: 0.9375rem;
     --bs-gutter-y: 0;
     display: flex;
@@ -195,7 +195,7 @@
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         width: 100%;
     }
-`,E=o.ZP.div`
+`,k=o.ZP.div`
     @media (min-width: 576px) {
         flex: 0 0 auto;
         width: 100%;
@@ -205,7 +205,7 @@
         flex: 0 0 auto;
         width: 50%;
     }
-`,k=o.ZP.div`
+`,y=o.ZP.div`
     align-items: center;
     display: flex;
     height: 100%;
@@ -214,17 +214,17 @@
     @media (max-width: 768px) {
         padding-bottom: 4rem;
     }
-`,v=o.ZP.img`
+`,E=o.ZP.img`
     border-radius: 0.15625rem !important;
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.175) !important;
     height: auto;
     max-width: 100%;
-`,P=o.ZP.div`
+`,v=o.ZP.div`
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
-`,Z=o.ZP.p`
+`,P=o.ZP.p`
     text-align: left;
     margin-bottom: 0.625rem;
     margin-top: 0;
@@ -232,11 +232,11 @@
     @media (max-width: 768px) {
         text-align: center;
     }
-`,z=o.ZP.span`
+`,Z=o.ZP.span`
     margin-top: 1rem !important;
 
     display: flex !important;
-`,_=(0,o.ZP)(u)`
+`,z=(0,o.ZP)(f)`
     border: 2px solid #fff;
     color: #fff;
 
@@ -247,7 +247,7 @@
     &:hover::after {
         width: 100%;
     }
-`,S=o.ZP.section`
+`,_=o.ZP.section`
     padding: 3.125rem 0;
 
     background-color: #fff;
@@ -265,7 +265,7 @@
         margin-top: 0;
         padding-top: 3.125rem;
     }
-`,I=o.ZP.div`
+`,S=o.ZP.div`
     @media (min-width: 576px) {
         flex: 0 0 auto;
         width: 100%;
@@ -275,7 +275,7 @@
         flex: 0 0 auto;
         width: 33.3%;
     }
-`,j=o.ZP.div`
+`,I=o.ZP.div`
     @media (min-width: 576px) {
         flex: 0 0 auto;
         width: 100%;
@@ -285,7 +285,7 @@
         flex: 0 0 auto;
         width: 66.6%;
     }
-`,C=o.ZP.div`
+`,j=o.ZP.div`
     text-align: left;
 
     @media (max-width: 1200px) {
@@ -296,7 +296,7 @@
     font-weight: 700;
     margin-bottom: 1.125rem;
     font-family: Montserrat, sans-serif;
-`,M=(0,o.ZP)(_)`
+`,T=(0,o.ZP)(z)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-image: linear-gradient(135deg, #02aab0, #00cdac);
@@ -313,12 +313,12 @@
     &:hover {
         -webkit-text-fill-color: #fff;
     }
-`,T=(0,o.ZP)(u)`
+`,C=(0,o.ZP)(f)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-image: linear-gradient(135deg, #02aab0, #00cdac);
     color: transparent;
-`,A=o.ZP.section`
+`,M=o.ZP.section`
     background-image: linear-gradient(135deg, #02aab0, #00cdac);
     -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
