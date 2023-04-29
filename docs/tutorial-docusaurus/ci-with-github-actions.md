@@ -10,11 +10,10 @@ Below is a workflow YAML to deploy a Docusaurus site with pnpm to GitHub Pages v
 ### Steps to follow
 
 1. Add the YAML file to the project directory.
-2. Update `user_name` and `user_email` with your Github username and email.
-3. Setup a token on Github.
-4. Make a push to the main branch.
+2. Setup a token on Github.
+3. Make a push to the main branch.
 
-```yaml {30,38,39} title="./.github/workflows/deploy.yml"
+```yaml title="./.github/workflows/deploy.yml"
 name: Deploy to GitHub Pages
 
 on:
@@ -34,10 +33,17 @@ jobs:
               with:
                   version: 7
 
-            - name: Install dependencies
+            - name: 🗜️ Install dependencies
               run: pnpm install
-            - name: Build website
+            - name: 🏗 Build website
               run: pnpm run build
+
+            # Optional - Only required if the following step is used
+            - name: 💾 Store commit hash as an enviromment variable
+              run: echo "COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
+            # Optional
+            - name: 🗃 Add commit hash to <html> tag in index.html
+              run: sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
 
             # Popular action to deploy to GitHub Pages:
             # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -52,7 +58,7 @@ jobs:
                   # https://github.com/actions/checkout/issues/13#issuecomment-724415212
                   # The GH actions bot is used by default if you didn't specify the two fields.
                   # You can swap them out with your own user credentials.
-                  user_name: github_username
-                  user_email: github_email
+                  user_name: ${{ github.event.pusher.name }}
+                  user_email: ${{ github.event.pusher.email }}
 # Give permission to workflow => https://stackoverflow.com/a/75308228
 ```
