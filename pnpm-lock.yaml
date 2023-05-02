@@ -25,9 +25,6 @@ dependencies:
   '@mdx-js/react':
     specifier: ^1.6.22
     version: 1.6.22(react@17.0.2)
-  '@stackql/docusaurus-plugin-smartlook':
-    specifier: ^1.0.2
-    version: 1.0.2
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
@@ -2549,10 +2546,6 @@ packages:
       eval: 0.1.8
       p-map: 4.0.0
       webpack-sources: 3.2.3
-    dev: false
-
-  /@stackql/docusaurus-plugin-smartlook@1.0.2:
-    resolution: {integrity: sha512-W2451Vc22jsrH+9TkBoXMjBU5Megek8f9Ba8+DzvSP+s+XlLXQgr00me/7vt05XafFrdUyP0/SE5cmV9SrS9CA==}
     dev: false
 
   /@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.21.3):

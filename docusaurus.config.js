@@ -49,6 +49,10 @@ const config = {
             defer: true,
             class: "sticky-popup",
         },
+        {
+            src: "https://service.watchthem.live/pixel/b7PJlPZri7r7bAbj",
+            defer: "true",
+        },
     ],
 
     presets: [
@@ -81,7 +85,7 @@ const config = {
         "https://fonts.googleapis.com/css?family=Montserrat:400,500,700",
     ],
 
-    plugins: ["@stackql/docusaurus-plugin-smartlook"],
+    // plugins: ["@stackql/docusaurus-plugin-smartlook"],
 
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -157,9 +161,6 @@ const config = {
             prism: {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
-            },
-            smartlook: {
-                projectKey: "0621118a02f7419687494f098626b756fecedbd0",
             },
         }),
 }
