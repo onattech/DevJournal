@@ -6,7 +6,7 @@ on:
             - main
         # Review gh actions docs if you want to further define triggers, paths, etc
         # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
-#
+
 jobs:
     deploy:
         name: Deploy to GitHub Pages
@@ -17,8 +17,18 @@ jobs:
               with:
                   version: 7
 
+            # Set up caching for pnpm modules
+            - name: Cache pnpm and node_modules
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      ~/.pnpm-store
+                      node_modules
+                  key: pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: pnpm-
+
             - name: 🗜️ Install dependencies
-              run: pnpm install
+              run: pnpm install --no-frozen-lockfile
             - name: 🏗 Build website
               run: pnpm run build
 
@@ -48,3 +58,4 @@ jobs:
                   user_name: ${{ github.event.pusher.name }}
                   user_email: ${{ github.event.pusher.email }}
 # Give permission to workflow => https://stackoverflow.com/a/75308228
+#
