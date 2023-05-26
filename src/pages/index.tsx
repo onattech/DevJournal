@@ -34,7 +34,11 @@ export default function Home(): JSX.Element {
             "div.navbar__items:nth-child(2) > div"
         )
         themeToggle.style.display = "none"
-        document.querySelector("body").style.opacity = "1"
+
+        const mainBody: HTMLElement = document.querySelector(
+            "#__docusaurus > div > main"
+        )
+        mainBody.style.opacity = "1"
     }, [])
 
     // Github stars for Datapane project
