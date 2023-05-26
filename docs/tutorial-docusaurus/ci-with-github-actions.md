@@ -33,6 +33,15 @@ jobs:
               with:
                   version: 7
 
+            - name: 📦 Cache pnpm and node_modules
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      ~/.pnpm-store
+                      node_modules
+                  key: pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: pnpm-
+
             - name: 🗜️ Install dependencies
               run: pnpm install
             - name: 🏗 Build website

@@ -17,8 +17,7 @@ jobs:
               with:
                   version: 7
 
-            # Set up caching for pnpm modules
-            - name: Cache pnpm and node_modules
+            - name: 📦 Cache pnpm and node_modules
               uses: actions/cache@v3
               with:
                   path: |
