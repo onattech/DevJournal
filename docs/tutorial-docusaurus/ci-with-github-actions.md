@@ -47,12 +47,11 @@ jobs:
             - name: 🏗 Build website
               run: pnpm run build
 
-            # Optional - Only required if the following step is used
-            - name: 💾 Store commit hash as an enviromment variable
-              run: echo "COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
             # Optional
-            - name: 🗃 Add commit hash to <html> tag in index.html
-              run: sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
+            - name: 📑 Add commit hash to <html> tag
+              run: |
+                  COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)
+                  sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
 
             # Popular action to deploy to GitHub Pages:
             # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
