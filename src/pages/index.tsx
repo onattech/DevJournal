@@ -28,17 +28,12 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export default function Home(): JSX.Element {
-    // Hide dark mode switch icon
     React.useLayoutEffect(() => {
-        let themeToggle: HTMLElement = document.querySelector(
-            "div.navbar__items:nth-child(2) > div"
-        )
-        themeToggle.style.display = "none"
+        // Hide dark mode switch icon
+        document.querySelector<HTMLElement>("div.navbar__items:nth-child(2) > div").style.display = "none"
 
-        const mainBody: HTMLElement = document.querySelector(
-            "#__docusaurus > div > main"
-        )
-        mainBody.style.opacity = "1"
+        // Make main page visible after css is loaded to avoid FOUC
+        document.querySelector<HTMLElement>("#__docusaurus > div > main").style.opacity = "1"
     }, [])
 
     // Github stars for Datapane project
@@ -47,9 +42,7 @@ export default function Home(): JSX.Element {
         let isMounted = true
 
         const fetchData = async () => {
-            const data = await fetch(
-                `https://api.github.com/repos/dataplane-app/dataplane`
-            )
+            const data = await fetch(`https://api.github.com/repos/dataplane-app/dataplane`)
             await new Promise((r) => setTimeout(r, 1000))
             const json = await data.json()
 
@@ -89,7 +82,10 @@ export default function Home(): JSX.Element {
                 {/* Anchor for About section */}
                 <div
                     id="about"
-                    style={{ marginTop: "-60px", position: "absolute" }}
+                    style={{
+                        marginTop: "-60px",
+                        position: "absolute",
+                    }}
                 />
 
                 {/**** About Section ****/}
@@ -99,37 +95,24 @@ export default function Home(): JSX.Element {
                         <Row>
                             <Column>
                                 <ImageWrapper>
-                                    <IMG
-                                        alt="Profile Image"
-                                        height="auto"
-                                        width="300px"
-                                        src={profile}
-                                    />
+                                    <IMG alt="Profile Image" height="auto" width="300px" src={profile} />
                                 </ImageWrapper>
                             </Column>
 
                             <Column>
                                 <AboutWrapper>
                                     <InfoText>
-                                        I am Onat, a US citizen. I speak English
-                                        and Turkish fluently and Arabic at an
-                                        acceptable level. I am a full stack Web
-                                        Developer with network engineering
-                                        background. The stack that I am most
-                                        comfortable with is React in the
-                                        frontend and Go in the backend.
+                                        I am Onat, a US citizen. I speak English and Turkish fluently and Arabic at an
+                                        acceptable level. I am a full stack Web Developer with network engineering
+                                        background. The stack that I am most comfortable with is React in the frontend
+                                        and Go in the backend.
                                     </InfoText>
                                     <InfoText>
-                                        Currently focusing on improving my
-                                        skills on Go and learning docker and
+                                        Currently focusing on improving my skills on Go and learning docker and
                                         kubernetes.
                                     </InfoText>
                                     <AboutButtonContainer>
-                                        <ButtonAbout
-                                            rel="noreferrer"
-                                            target="_blank"
-                                            href="/resume.pdf"
-                                        >
+                                        <ButtonAbout rel="noreferrer" target="_blank" href="/resume.pdf">
                                             View Resume{" "}
                                         </ButtonAbout>
                                         <ButtonAbout
@@ -150,8 +133,16 @@ export default function Home(): JSX.Element {
                 {/**** Projects Section ****/}
                 <Projects>
                     <Container>
-                        <div style={{ marginBottom: "9.375rem" }}>
-                            <SectionTitle style={{ color: "#272341" }}>
+                        <div
+                            style={{
+                                marginBottom: "9.375rem",
+                            }}
+                        >
+                            <SectionTitle
+                                style={{
+                                    color: "#272341",
+                                }}
+                            >
                                 Projects
                             </SectionTitle>
 
@@ -159,9 +150,7 @@ export default function Home(): JSX.Element {
                             <Row>
                                 <Column33>
                                     <ProjectWrapper>
-                                        <ProjectTitle>
-                                            Dataplane ({stars} Github 🌟️s)
-                                        </ProjectTitle>
+                                        <ProjectTitle>Dataplane ({stars} Github 🌟️s)</ProjectTitle>
                                         <div>
                                             <p
                                                 style={{
@@ -170,18 +159,11 @@ export default function Home(): JSX.Element {
                                                     lineHeight: "1.5",
                                                 }}
                                             >
-                                                I have helped build and
-                                                currently maintaining Dataplane
-                                                as a full-stack engineer.
-                                                Dataplane is an open source
-                                                Airflow inspired data platform
-                                                to automate, schedule and design
-                                                data pipelines and workflows
-                                                written in Go. I am responsible
-                                                with all things frontend and
-                                                setting up GraphQL endpoints,
-                                                writing tests and more in the
-                                                backend with Go. Check out my{" "}
+                                                I have helped build and currently maintaining Dataplane as a full-stack
+                                                engineer. Dataplane is an open source Airflow inspired data platform to
+                                                automate, schedule and design data pipelines and workflows written in
+                                                Go. I am responsible with all things frontend and setting up GraphQL
+                                                endpoints, writing tests and more in the backend with Go. Check out my{" "}
                                                 <a
                                                     rel="noreferrer"
                                                     href="https://github.com/dataplane-app/dataplane/graphs/contributors"
@@ -191,11 +173,7 @@ export default function Home(): JSX.Element {
                                                 </a>
                                             </p>
                                         </div>
-                                        <ButtonProject
-                                            rel="noreferrer"
-                                            target="_blank"
-                                            href="https://dataplane.app/"
-                                        >
+                                        <ButtonProject rel="noreferrer" target="_blank" href="https://dataplane.app/">
                                             See Live
                                         </ButtonProject>
                                         <ButtonSourceCode
@@ -211,10 +189,7 @@ export default function Home(): JSX.Element {
                                 <Column66>
                                     <div style={{ margin: "0 auto" }}>
                                         <div>
-                                            <img
-                                                alt="Project Image"
-                                                src={dataplane}
-                                            />
+                                            <img alt="Project Image" src={dataplane} />
                                         </div>
                                     </div>
                                 </Column66>
@@ -225,7 +200,11 @@ export default function Home(): JSX.Element {
 
                 {/**** Contact Section ****/}
                 <Contact>
-                    <Container style={{ maxWidth: "480px" }}>
+                    <Container
+                        style={{
+                            maxWidth: "480px",
+                        }}
+                    >
                         <Row>
                             <SectionTitle>Contact</SectionTitle>
                             <form
@@ -261,7 +240,9 @@ export default function Home(): JSX.Element {
                                     type="email"
                                     name="_replyto"
                                     id="email"
-                                    style={{ marginBottom: "20px" }}
+                                    style={{
+                                        marginBottom: "20px",
+                                    }}
                                 />
                                 <br />
                                 <label htmlFor="textarea" id="textarealabel">
@@ -269,7 +250,9 @@ export default function Home(): JSX.Element {
                                 </label>
                                 <textarea
                                     name="body"
-                                    style={{ width: "100%" }}
+                                    style={{
+                                        width: "100%",
+                                    }}
                                     rows={8}
                                     cols={50}
                                 ></textarea>

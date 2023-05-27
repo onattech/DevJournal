@@ -8,7 +8,13 @@ export default function Endpoint({ href, method }) {
             <div className={styles.method} style={{ color: methodColor(method) }}>
                 {method}
             </div>
-            <a className={styles.url} style={{ left: urlPadding(method) }} href={href} target="_blank" rel="noopener noreferrer">
+            <a
+                className={styles.url}
+                style={{ left: urlPadding(method) }}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 {href}
             </a>
             <CodeBlock>{href}</CodeBlock>

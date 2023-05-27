@@ -81,9 +81,7 @@ const config = {
         ],
     ],
 
-    stylesheets: [
-        "https://fonts.googleapis.com/css?family=Montserrat:400,500,700",
-    ],
+    stylesheets: ["https://fonts.googleapis.com/css?family=Montserrat:400,500,700"],
 
     // plugins: ["@stackql/docusaurus-plugin-smartlook"],
 
@@ -105,7 +103,11 @@ const config = {
                         position: "left",
                         label: "Tutorials",
                     },
-                    { to: "/blog", label: "Blog", position: "left" },
+                    {
+                        to: "/blog",
+                        label: "Blog",
+                        position: "left",
+                    },
                     {
                         href: "https://github.com/onattech",
                         label: "GitHub",

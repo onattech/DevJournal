@@ -1,8 +1,8 @@
 {
-  "label": "Tutorial - DevOps",
-  "position": 1,
-  "link": {
-    "type": "generated-index",
-    "description": "DevOps related tutorials."
-  }
+    "label": "Tutorial - DevOps",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "DevOps related tutorials."
+    }
 }

@@ -1,8 +1,8 @@
 {
-  "label": "Tutorial - Golang",
-  "position": 1,
-  "link": {
-    "type": "generated-index",
-    "description": "GO related tutorials."
-  }
+    "label": "Tutorial - Golang",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "GO related tutorials."
+    }
 }
