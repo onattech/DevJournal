@@ -39,9 +39,9 @@ algolia: {
 },
 ```
 
-Make a file in the root directory called `config.json` and paste the below code in it. Replace the address with your own at the highlighted line. Leave `/sitemap.xml` at the end. `start_url` is needed if docs are at the top level of your site `www.example.con`. It may not be needed if docs are at `docs.example.com`
+Make a file in the root directory called `config.json` and paste the below code in it. Replace the address with your own at the highlighted line. Leave `/sitemap.xml` at the end. `start_url` is needed if docs are at the top level of your site `www.example.com`. It may not be needed if docs are at `docs.example.com`
 
-```json {3,4}
+```json {3,4} title='./config.json'
 {
     "index_name": "index",
     "sitemap_urls": ["https://your_website.com/sitemap.xml"],
@@ -92,3 +92,32 @@ docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)"
 ```
 
 Here's what the output should look like ![Output](./img/dockerResults.png)
+
+### Deploy with Github Actions
+
+Make an `algolia.yml` file in `.github/workflows/` folder any copy the contents below.
+
+```yml title='./.github/workflows/algolia.yml'
+name: Algolia Indexing
+
+on:
+    workflow_run:
+        workflows: ["pages-build-deployment"]
+        types:
+            - completed
+
+jobs:
+    algolia-index:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Install JQ
+              run: sudo apt-get install -y jq
+
+            - name: Run Algolia Scraper
+              run: |
+                  docker run --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
+```
