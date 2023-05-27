@@ -48,7 +48,7 @@ jobs:
               run: pnpm run build
 
             # Optional
-            - name: "#️⃣" Add commit hash to <html> tag
+            - name: ️🏷 Add commit hash to <html> tag
               run: |
                   COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)
                   sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html

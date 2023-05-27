@@ -9,7 +9,7 @@ You updated your site, committed and pushed. Continious integration picked up an
 
 ## YAML
 
-```yaml {22,23,25,26} title="deploy.yml"
+```yaml {22-25} title="deploy.yml"
 name: Deploy to GitHub Pages
 
 on:
@@ -31,11 +31,10 @@ jobs:
             - name: 🏗 Build website
               run: pnpm run build
 
-            - name: 💾 Store commit hash as an enviromment variable
-              run: echo "COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
-
-            - name: 🗃 Add commit hash to <html> tag in index.html
-              run: sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
+            - name: ️🏷 Add commit hash to <html> tag
+              run: |
+                  COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)
+                  sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
