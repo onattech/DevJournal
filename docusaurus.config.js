@@ -109,6 +109,10 @@ const config = {
                         position: "left",
                     },
                     {
+                        type: "search",
+                        position: "right",
+                    },
+                    {
                         href: "https://github.com/onattech",
                         label: "GitHub",
                         position: "right",
@@ -163,6 +167,13 @@ const config = {
             prism: {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
+            },
+            algolia: {
+                appId: process.env.ALGOLIA_APP_ID,
+                apiKey: process.env.ALGOLIA_API_KEY,
+                indexName: "index",
+                contextualSearch: true,
+                searchParameters: {},
             },
         }),
 }

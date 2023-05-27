@@ -21,6 +21,12 @@ sidebar_position: 2
 
 ### Docusaurus settings
 
+Install Algolia plugin
+
+```bash
+pnpm add @docusaurus/theme-search-algolia
+```
+
 Add below snippet with your credentials we noted above inside the themeConfig object
 
 ```js title=./docusaurus.config.js
@@ -33,12 +39,13 @@ algolia: {
 },
 ```
 
-Make a file in the root directory called `config.json` and paste the below code in it. Replace the address with your own at the highlighted line. Leave `/sitemap.xml` at the end.
+Make a file in the root directory called `config.json` and paste the below code in it. Replace the address with your own at the highlighted line. Leave `/sitemap.xml` at the end. `start_url` is needed if docs are at the top level of your site `www.example.con`. It may not be needed if docs are at `docs.example.com`
 
-```json {3}
+```json {3,4}
 {
     "index_name": "index",
     "sitemap_urls": ["https://your_website.com/sitemap.xml"],
+    "start_urls": ["https://your_website.com"], // May not be needed, check above
     "sitemap_alternate_links": true,
     "selectors": {
         "lvl0": {
@@ -66,11 +73,12 @@ Make a file in the root directory called `config.json` and paste the below code 
 }
 ```
 
-Also make a `.env` file at the root level of your project if you already don't have one and add your credentials in it.
+Also make a `.env` file at the root level of your project if you already don't have one and add your credentials in it. Variables need to be named exactly as in the example with no spaces.
 
+<!-- prettier-ignore -->
 ```js title=./.env
-APPLICATION_ID = your_app_id
-API_KEY = your_app_key
+ALGOLIA_APP_ID=your_app_id
+ALGOLIA_API_KEY=your_app_key
 ```
 
 We need install a small dependency called jq. Get it [here](https://stedolan.github.io/jq/download/)

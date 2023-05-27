@@ -29,10 +29,10 @@ export const GlobalStyle = createGlobalStyle`
 
 export default function Home(): JSX.Element {
     React.useLayoutEffect(() => {
-        // Hide dark mode switch icon
-        document.querySelector<HTMLElement>("div.navbar__items:nth-child(2) > div").style.display = "none"
+        // Hide dark mode toggle
+        document.querySelector<HTMLElement>('[class*="toggle_"]').style.display = "none"
 
-        // Make main page visible after css is loaded to avoid FOUC
+        // Make main page visible after css-in-js is loaded to avoid FOUC
         document.querySelector<HTMLElement>("#__docusaurus > div > main").style.opacity = "1"
     }, [])
 
