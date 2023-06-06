@@ -41,6 +41,12 @@ Update the following in the `docusaurus.config.js` file.
 -   organizationName
 -   projectName
 
+## Install type definitions
+
+```bash
+pnpm add @docusaurus/types
+```
+
 ## Custom domain
 
 Add `CNAME` file to `/static` directory.
