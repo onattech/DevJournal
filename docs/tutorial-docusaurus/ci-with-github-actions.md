@@ -43,7 +43,7 @@ jobs:
                   restore-keys: pnpm-
 
             - name: 🗜️ Install dependencies
-              run: pnpm install
+              run: pnpm install --no-frozen-lockfile
             - name: 🏗 Build website
               run: pnpm run build
 
@@ -70,3 +70,9 @@ jobs:
                   user_email: ${{ github.event.pusher.email }}
 # Give permission to workflow => https://stackoverflow.com/a/75308228
 ```
+
+### Set workflow permissions
+
+Github actions needs permissions to commit to the repository. You may give necessary permission by going to `Settings -> Actions -> General -> Workflow permissions` and selecting `Read and write permissions`
+
+![Workflow permissions](./img/workflowPermissions.png)
