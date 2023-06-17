@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[6868],{6251:s=>{s.exports=JSON.parse('{"title":"Docusaurus","description":"Docusaurus concepts","slug":"/category/docusaurus","permalink":"/docs/category/docusaurus","navigation":{"next":{"title":"Custom Mdx components","permalink":"/docs/category/custom-mdx-components"}}}')}}]);
