@@ -53,6 +53,10 @@ const config = {
             src: "https://service.watchthem.live/pixel/b7PJlPZri7r7bAbj",
             defer: "true",
         },
+        {
+            src: "https://unpkg.com/screen-size-tag",
+            defer: "true",
+        },
     ],
 
     presets: [
