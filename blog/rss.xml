@@ -14,7 +14,8 @@
             <guid>http://docs.onatim.com/blog/welcome</guid>
             <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome!]]></description>
-            <content:encoded><![CDATA[<p><strong>Welcome!</strong></p><p>Be on the lookout for upcoming blog posts.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p><strong>Welcome!</strong></p>
+<!-- --><p>Be on the lookout for upcoming blog posts.</p>]]></content:encoded>
             <category>hello</category>
         </item>
     </channel>
