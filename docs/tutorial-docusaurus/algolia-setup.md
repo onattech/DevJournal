@@ -93,6 +93,42 @@ docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)"
 
 Here's what the output should look like ![Output](./img/dockerResults.png)
 
+### Add to navbar
+
+Make sure to add search to navbar items list.
+
+```js {19-22} title=./docusaurus.config.js
+navbar: {
+    title: "Portfolio",
+    logo: {
+        alt: "My Site Logo",
+        src: "img/logo.svg",
+    },
+    items: [
+        {
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            position: "left",
+            label: "Tutorials",
+        },
+        {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+        },
+        {
+            type: "search",
+            position: "right",
+        },
+        {
+            href: "https://github.com/onattech",
+            label: "GitHub",
+            position: "right",
+        },
+    ],
+}
+```
+
 ### Deploy with Github Actions
 
 Make an `algolia.yml` file in `.github/workflows/` folder any copy the contents below.
