@@ -17,7 +17,7 @@ sidebar_position: 3
 
 ### 2. Add credentials to .env file
 
-```{22,23,25,26} title=.env
+```txt title=".env"
 EMAILJS_SERVICE_ID=service_7pw8741
 EMAILJS_TEMPLATE_ID=template_b1rqq5s
 EMAILJS_PUBLIC_KEY=GIVRFmTLb16ynkEEy
@@ -62,7 +62,7 @@ const config = {
 
 ### 5. Add EmailJS to NotFound.tsx
 
-```tsx title=./src/theme/NotFound.tsx
+```tsx title="./src/theme/NotFound.tsx"
 import React from "react"
 import NotFound from "@theme-original/NotFound"
 import emailjs from "@emailjs/browser"

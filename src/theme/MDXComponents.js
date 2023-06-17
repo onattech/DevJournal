@@ -8,6 +8,6 @@ export default {
     ...MDXComponents,
     // Map the "sampleEmail" tag to our <SampleEmail /> component!
     // `SampleEmail` will receive all props that were passed to `sampleEmail` in MDX
-    endpoint: Endpoint,
-    terminalWindow: TerminalWindow,
+    Endpoint,
+    TerminalWindow,
 }
