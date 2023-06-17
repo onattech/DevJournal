@@ -12,7 +12,7 @@ pnpm install dotenv
 
 ### 2. Add .env file at the root
 
-```{22,23,25,26} title=.env
+```{22,23,25,26} title=".env"
 EMAILJS_SERVER_ID=service_7pw8741
 EMAILJS_TEMPLATE_ID=template_b1rqq5s
 EMAILJS_PUBLIC_KEY=GIVRFmTLb16ynkEEy
@@ -51,7 +51,7 @@ const config = {
 
 ### 4. Consume
 
-```js {3,6,8-10} title=somepage.tsx
+```js {3,6,8-10} title="somepage.tsx"
 //...
 import NotFound from "@theme-original/NotFound"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"

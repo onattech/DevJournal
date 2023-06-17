@@ -29,7 +29,7 @@ pnpm add @docusaurus/theme-search-algolia
 
 Add below snippet with your credentials we noted above inside the themeConfig object
 
-```js title=./docusaurus.config.js
+```js title="./docusaurus.config.js"
 algolia: {
     appId: "your_app_id",
     apiKey: "your_api_key",
@@ -41,7 +41,7 @@ algolia: {
 
 Make a file in the root directory called `config.json` and paste the below code in it. Replace the address with your own at the highlighted line. Leave `/sitemap.xml` at the end. `start_url` is needed if docs are at the top level of your site `www.example.com`. It may not be needed if docs are at `docs.example.com`
 
-```json {3,4} title='./config.json'
+```json {3,4} title="./config.json"
 {
     "index_name": "index",
     "sitemap_urls": ["https://your_website.com/sitemap.xml"],
@@ -76,7 +76,7 @@ Make a file in the root directory called `config.json` and paste the below code 
 Also make a `.env` file at the root level of your project if you already don't have one and add your credentials in it. Variables need to be named exactly as in the example with no spaces.
 
 <!-- prettier-ignore -->
-```js title=./.env
+```js title="./.env"
 ALGOLIA_APP_ID=your_app_id
 ALGOLIA_API_KEY=your_app_key
 ```
@@ -97,7 +97,7 @@ Here's what the output should look like ![Output](./img/dockerResults.png)
 
 Make sure to add search to navbar items list.
 
-```js {19-22} title=./docusaurus.config.js
+```js {19-22} title="./docusaurus.config.js"
 navbar: {
     title: "Portfolio",
     logo: {
