@@ -19,14 +19,14 @@
     text-decoration: none;
   }
 `;function m(){a.useLayoutEffect((()=>{document.querySelector('[class*="toggle_"]').style.display="none",document.querySelector("#__docusaurus > div > main").style.opacity="1"}),[]);const[e,t]=a.useState(null);return a.useEffect((()=>{let e=!0;return(async()=>{const i=await fetch("https://api.github.com/repos/dataplane-app/dataplane");await new Promise((e=>setTimeout(e,1e3)));const a=await i.json();e&&t(a.watchers_count)})().catch(console.error),()=>{e=!1}}),[]),(0,l.jsxs)(r.Z,{title:"Onat",description:"My portfoio and dev insights",children:[(0,l.jsx)(s,{}),(0,l.jsxs)("main",{children:[(0,l.jsx)(p,{children:(0,l.jsxs)(h,{children:[(0,l.jsxs)(g,{children:["Hi, my name is ",(0,l.jsx)(c,{children:"Onat"}),(0,l.jsx)("br",{}),"I'm a full-stack Developer."]}),(0,l.jsx)(x,{children:(0,l.jsx)(b,{rel:"noreferrer",href:"#about",children:"Know more"})})]})}),(0,l.jsx)("div",{id:"about",style:{marginTop:"-60px",position:"absolute"}}),(0,l.jsx)(u,{children:(0,l.jsxs)(h,{children:[(0,l.jsx)(w,{children:"About me"}),(0,l.jsxs)(j,{children:[(0,l.jsx)(y,{children:(0,l.jsx)(k,{children:(0,l.jsx)(v,{alt:"Profile Image",height:"auto",width:"300px",src:n})})}),(0,l.jsx)(y,{children:(0,l.jsxs)(P,{children:[(0,l.jsx)(Z,{children:"I am Onat, a US citizen. I speak English and Turkish fluently and Arabic at an acceptable level. I am a full stack Web Developer with network engineering background. The stack that I am most comfortable with is React in the frontend and Go in the backend."}),(0,l.jsx)(Z,{children:"Currently focusing on improving my skills on Go and learning docker and kubernetes."}),(0,l.jsxs)(z,{children:[(0,l.jsxs)(_,{rel:"noreferrer",target:"_blank",href:"/resume.pdf",children:["View Resume"," "]}),(0,l.jsx)(_,{rel:"noreferrer",target:"_blank",style:{marginLeft:"20px"},href:"https://github.com/onattech",children:"Github Profile"})]})]})})]})]})}),(0,l.jsx)(S,{children:(0,l.jsx)(h,{children:(0,l.jsxs)("div",{style:{marginBottom:"9.375rem"},children:[(0,l.jsx)(w,{style:{color:"#272341"},children:"Projects"}),(0,l.jsxs)(j,{children:[(0,l.jsx)(I,{children:(0,l.jsxs)(T,{children:[(0,l.jsxs)(C,{children:["Dataplane (",e," Github \ud83c\udf1f\ufe0fs)"]}),(0,l.jsx)("div",{children:(0,l.jsxs)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:["I have helped build and currently maintaining Dataplane as a full-stack engineer. Dataplane is an open source Airflow inspired data platform to automate, schedule and design data pipelines and workflows written in Go. I am responsible with all things frontend and setting up GraphQL endpoints, writing tests and more in the backend with Go. Check out my"," ",(0,l.jsx)("a",{rel:"noreferrer",href:"https://github.com/dataplane-app/dataplane/graphs/contributors",target:"_blank",children:"contributions."})]})}),(0,l.jsx)(M,{rel:"noreferrer",target:"_blank",href:"https://dataplane.app/",children:"See Live"}),(0,l.jsx)(A,{rel:"noreferrer",target:"_blank",href:"https://github.com/dataplane-app/dataplane",children:"Source Code"})]})}),(0,l.jsx)(G,{children:(0,l.jsx)("div",{style:{margin:"0 auto"},children:(0,l.jsx)("div",{children:(0,l.jsx)("img",{alt:"Project Image",src:o})})})})]})]})})}),(0,l.jsx)(D,{children:(0,l.jsx)(h,{style:{maxWidth:"480px"},children:(0,l.jsxs)(j,{children:[(0,l.jsx)(w,{children:"Contact"}),(0,l.jsxs)("form",{action:"https://formspree.io/xqkyrbrr",method:"POST",style:{textAlign:"left",fontSize:"1.3rem"},children:[(0,l.jsx)("label",{htmlFor:"name",style:{display:"inline-block",width:"80px"},children:"Name"}),(0,l.jsx)("input",{type:"text",name:"name",id:"name"}),(0,l.jsx)("br",{}),(0,l.jsx)("label",{htmlFor:"_replyto",style:{marginTop:"10px",display:"inline-block",width:"80px"},children:"Email"}),(0,l.jsx)("input",{type:"email",name:"_replyto",id:"email",style:{marginBottom:"20px"}}),(0,l.jsx)("br",{}),(0,l.jsx)("label",{htmlFor:"textarea",id:"textarealabel",children:"How may I help you?"}),(0,l.jsx)("textarea",{name:"body",style:{width:"100%"},rows:8,cols:50}),(0,l.jsx)("br",{}),(0,l.jsx)("button",{value:"Submit",style:{border:"none",borderRadius:"3px",fontSize:"1rem",marginTop:"10px",padding:"10px",fontFamily:"Montserrat,sans-serif"},children:"Submit"})]})]})})})]})]})}const c=d.ZP.span`
-    background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+    background-image: linear-gradient(135deg, #00a6f9 0%, #69cdff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0000;
 `,p=d.ZP.section`
     align-items: center;
-    background: #fff;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     border-bottom: 0;
     color: #272341;
     display: flex;
@@ -133,16 +133,16 @@
     }
 
     border: 2px solid transparent;
-    border-image: linear-gradient(135deg, #02aab0, #00cdac);
+    border-image: linear-gradient(135deg, #00a6f9, #69cdff);
     border-image-slice: 1;
 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
 
     &:after {
-        background-image: linear-gradient(135deg, #02aab0, #00cdac);
+        background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     }
 
     &:hover {
@@ -156,12 +156,11 @@
 `,u=d.ZP.section`
     padding: 3.125rem 0;
 
-    background-color: #02aab0;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     border-top: 0;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    color: #fff;
+    color: #21243d;
     height: 100%;
     padding-bottom: 10%;
 
@@ -215,8 +214,8 @@
         padding-bottom: 4rem;
     }
 `,v=d.ZP.img`
-    border-radius: 0.15625rem !important;
-    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.175) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.375) !important;
     height: auto;
     max-width: 100%;
 `,P=d.ZP.div`
@@ -237,8 +236,8 @@
 
     display: flex !important;
 `,_=(0,d.ZP)(f)`
-    border: 2px solid #fff;
-    color: #fff;
+    // border: 2px solid #21243d;
+    color: #21243d;
 
     &:after {
         background: #fff;
@@ -299,15 +298,15 @@
 `,M=(0,d.ZP)(_)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
 
     border: 2px solid transparent;
-    border-image: linear-gradient(135deg, #02aab0, #00cdac);
+    border-image: linear-gradient(135deg, #00a6f9, #69cdff);
     border-image-slice: 1;
 
     &:after {
-        background-image: linear-gradient(135deg, #02aab0, #00cdac);
+        background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     }
 
     &:hover {
@@ -316,13 +315,13 @@
 `,A=(0,d.ZP)(f)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
 `,D=d.ZP.section`
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-    color: #fff;
+    color: #272341;
     margin-bottom: -1px;
     margin-top: -6.25rem;
     padding: 9.375rem 0 6.25rem;
