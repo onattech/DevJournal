@@ -1,10 +1,10 @@
 {
     "index_name": "index",
     "sitemap_urls": [
-        "https://onatim.com/sitemap.xml"
+        "https://www.onatim.com/sitemap.xml"
     ],
     "start_urls": [
-        "https://onatim.com"
+        "https://www.onatim.com"
     ],
     "sitemap_alternate_links": true,
     "selectors": {
