@@ -284,7 +284,7 @@ export default function Home(): JSX.Element {
  *********************/
 
 const Name = styled.span`
-    background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+    background-image: linear-gradient(135deg, #00a6f9 0%, #69cdff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -293,7 +293,7 @@ const Name = styled.span`
 
 const Hero = styled.section`
     align-items: center;
-    background: #fff;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     border-bottom: 0;
     color: #272341;
     display: flex;
@@ -408,16 +408,16 @@ const ButtonKnowMore = styled(Button)`
     }
 
     border: 2px solid transparent;
-    border-image: linear-gradient(135deg, #02aab0, #00cdac);
+    border-image: linear-gradient(135deg, #00a6f9, #69cdff);
     border-image-slice: 1;
 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
 
     &:after {
-        background-image: linear-gradient(135deg, #02aab0, #00cdac);
+        background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     }
 
     &:hover {
@@ -432,12 +432,11 @@ const ButtonKnowMore = styled(Button)`
 const About = styled.section`
     padding: 3.125rem 0;
 
-    background-color: #02aab0;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     border-top: 0;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    color: #fff;
+    color: #21243d;
     height: 100%;
     padding-bottom: 10%;
 
@@ -500,8 +499,8 @@ const ImageWrapper = styled.div`
 `
 
 const IMG = styled.img`
-    border-radius: 0.15625rem !important;
-    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.175) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.375) !important;
     height: auto;
     max-width: 100%;
 `
@@ -530,8 +529,8 @@ const AboutButtonContainer = styled.span`
 `
 
 const ButtonAbout = styled(Button)`
-    border: 2px solid #fff;
-    color: #fff;
+    // border: 2px solid #21243d;
+    color: #21243d;
 
     &:after {
         background: #fff;
@@ -603,15 +602,15 @@ const ProjectTitle = styled.h3`
 const ButtonProject = styled(ButtonAbout)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
 
     border: 2px solid transparent;
-    border-image: linear-gradient(135deg, #02aab0, #00cdac);
+    border-image: linear-gradient(135deg, #00a6f9, #69cdff);
     border-image-slice: 1;
 
     &:after {
-        background-image: linear-gradient(135deg, #02aab0, #00cdac);
+        background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     }
 
     &:hover {
@@ -622,15 +621,15 @@ const ButtonProject = styled(ButtonAbout)`
 const ButtonSourceCode = styled(Button)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
 `
 
 const Contact = styled.section`
-    background-image: linear-gradient(135deg, #02aab0, #00cdac);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-    color: #fff;
+    color: #272341;
     margin-bottom: -1px;
     margin-top: -6.25rem;
     padding: 9.375rem 0 6.25rem;
