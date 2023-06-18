@@ -1,14 +1,18 @@
 import React from "react"
 import NotFound from "@theme-original/NotFound"
+import type { WrapperProps } from "@docusaurus/types"
+import type NotFoundType from "@theme/NotFound"
 import emailjs from "@emailjs/browser"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 
-export default function NotFoundWrapper(props) {
+type Props = WrapperProps<typeof NotFoundType>
+
+export default function NotFoundWrapper(props: Props): JSX.Element {
     const { siteConfig } = useDocusaurusContext()
 
-    const serverId = siteConfig.customFields.EMAILJS_SERVER_ID as string
-    const templateId = siteConfig.customFields.EMAILJS_TEMPLATE_ID as string
-    const publicKey = siteConfig.customFields.EMAILJS_PUBLIC_KEY as string
+    const serverId = siteConfig.customFields!.EMAILJS_SERVER_ID as string
+    const templateId = siteConfig.customFields!.EMAILJS_TEMPLATE_ID as string
+    const publicKey = siteConfig.customFields!.EMAILJS_PUBLIC_KEY as string
 
     React.useEffect(() => {
         if (!serverId || !templateId || !publicKey) return

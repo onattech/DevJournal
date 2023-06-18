@@ -34,10 +34,6 @@ jobs:
                   COMMIT_HASH=$(echo ${{ github.sha }} | cut -c 1-7)
                   sed -i 's/<html /<html data-commit-hash="'"$COMMIT_HASH"'" /' ./build/index.html
 
-            - name: ️🏷Show html
-              run: |
-                  cat ./build/index.html
-
             - name: 🌐 Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:

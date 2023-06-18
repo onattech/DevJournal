@@ -3,7 +3,7 @@ import Icon from "@mdi/react"
 import { mdiCropSquare, mdiClose, mdiMinus } from "@mdi/js"
 import styles from "./styles.module.css"
 
-export default function CLIWindow({ children }) {
+export default function CLIWindow({ children }: { children: React.ReactNode }) {
     return (
         <div className={styles.browserWindow} style={{ maxWidth: "700px" }}>
             <div className={styles.browserWindowHeader}>

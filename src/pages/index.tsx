@@ -30,28 +30,28 @@ export const GlobalStyle = createGlobalStyle`
 export default function Home(): JSX.Element {
     React.useLayoutEffect(() => {
         // Hide dark mode toggle
-        document.querySelector<HTMLElement>('[class*="toggle_"]').style.display = "none"
+        document.querySelector<HTMLElement>('[class*="toggle_"]')!.style.display = "none"
 
         // Make main page visible after css-in-js is loaded to avoid FOUC
-        document.querySelector<HTMLElement>("#__docusaurus > div > main").style.opacity = "1"
+        document.querySelector<HTMLElement>("#__docusaurus > div > main")!.style.opacity = "1"
     }, [])
 
     // Github stars for Datapane project
-    const [stars, setStars] = React.useState(null)
+    const [stars, setStars] = React.useState<number | null>(null)
     React.useEffect(() => {
         let isMounted = true
 
-        const fetchData = async () => {
+        const fetchStars = async () => {
             const data = await fetch(`https://api.github.com/repos/dataplane-app/dataplane`)
             await new Promise((r) => setTimeout(r, 1000))
-            const json = await data.json()
+            const json: { watchers_count: number } = await data.json()
 
             if (isMounted) {
                 setStars(json.watchers_count)
             }
         }
 
-        fetchData().catch(console.error)
+        fetchStars().catch(console.error)
 
         return () => {
             isMounted = false

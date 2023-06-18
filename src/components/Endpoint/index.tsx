@@ -2,7 +2,13 @@ import React from "react"
 import styles from "./styles.module.css"
 import CodeBlock from "@theme/CodeBlock"
 
-export default function Endpoint({ href, method }) {
+type Endpoint = {
+    href: string
+    method: Method
+}
+type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE"
+
+export default function Endpoint({ href, method }: Endpoint) {
     return (
         <div className={styles.main}>
             <div className={styles.method} style={{ color: methodColor(method) }}>
@@ -22,7 +28,7 @@ export default function Endpoint({ href, method }) {
     )
 }
 
-function methodColor(method) {
+function methodColor(method: Method) {
     switch (method) {
         case "GET":
             return "#61AFFE"
@@ -34,13 +40,10 @@ function methodColor(method) {
             return "#50E3C2"
         case "DELETE":
             return "#F93E3E"
-
-        default:
-            break
     }
 }
 
-function urlPadding(method) {
+function urlPadding(method: Method) {
     switch (method) {
         case "GET":
             return "70px"
@@ -52,8 +55,5 @@ function urlPadding(method) {
             return "90px"
         case "DELETE":
             return "98px"
-
-        default:
-            break
     }
 }
