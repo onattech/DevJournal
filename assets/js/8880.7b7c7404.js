@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[8880],{8880:(e,u,s)=>{s.r(u)}}]);

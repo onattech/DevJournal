@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[3237],{122:(e,t,i)=>{i.r(t),i.d(t,{GlobalStyle:()=>s,default:()=>m});var a=i(5170),r=i(7494);const n=i.p+"assets/images/profile-5bc73eac6f8211920b1ff8bf5a029047.jpg",o=i.p+"assets/images/dataplane-c22c1910ba039744ea19f0086b455781.png";var d=i(1087),l=i(3010);const s=d.vJ`
+"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[3237],{122:(e,t,i)=>{i.r(t),i.d(t,{GlobalStyle:()=>s,default:()=>m});var a=i(5170),r=i(9183);const n=i.p+"assets/images/profile-5bc73eac6f8211920b1ff8bf5a029047.jpg",o=i.p+"assets/images/dataplane-c22c1910ba039744ea19f0086b455781.png";var d=i(1087),l=i(3010);const s=d.vJ`
   :root {
     scroll-behavior: smooth;
   }
