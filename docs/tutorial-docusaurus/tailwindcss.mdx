@@ -1,0 +1,92 @@
+---
+sidebar_position: 2
+title: Tailwind CSS Setup
+---
+
+# Setting up Tailwind CSS with Docusaurus
+
+## 1. Install dependencies
+
+        ```bash
+        pnpm add tailwindcss postcss autoprefixer
+        ```
+
+## 2. Add Tailwind CSS config file
+
+Add the following config file to the root directory:
+
+```js title="./tailwind.config.js"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: ["./src/**/*.{js,jsx,ts,tsx,md,mdx}", "./docs/**/*.{md,mdx}"],
+    theme: { extend: {} },
+    plugins: [],
+    darkMode: ["class", '[data-theme="dark"]'], // Support dark mode
+    corePlugins: { preflight: false }, // Prevent Docusaurus defaults to be overwritten
+    blocklist: ["container"], // Disable built-in classes to not interfere with Docusaurus classes
+}
+```
+
+## 3. Add Tailwind CSS plugin to docusaurus.config.js
+
+```js title="./docusaurus.config.js"
+    //...
+
+    plugins: [
+        async function myPlugin(context, options) {
+            return {
+                name: "docusaurus-tailwindcss",
+                configurePostCss(postcssOptions) {
+                    // Appends TailwindCSS and AutoPrefixer.
+                    postcssOptions.plugins.push(require("tailwindcss"))
+                    postcssOptions.plugins.push(require("autoprefixer"))
+                    return postcssOptions
+                },
+            }
+        },
+    ],
+
+    //...
+```
+
+## 4. Update global css file to load Tailwind CSS
+
+```css {1-3} title="./src/css/custom.css"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* ... */
+```
+
+## 5. Testing
+
+Make a new md file add the contents below
+
+```md
+# Testing Tailwind
+
+export function Section() {
+return (
+
+<div className="bg-red-500 dark:bg-yellow-500">
+In light, I'm red, a vibrant sight,
+
+<br/>
+
+In darkness, yellow, Tailwind set right!
+
+</div>
+)
+}
+
+Try both light and dark mode.
+
+<Section />
+```
