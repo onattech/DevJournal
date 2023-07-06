@@ -5,11 +5,19 @@ title: Tailwind CSS Setup
 
 # Setting up Tailwind CSS with Docusaurus
 
+:::tip
+Installing Tailwind CSS adds only 575 bytes to the bundle size!
+:::
+
+:::info
+Credit is due to this [blog post](https://dev.to/sajclarke_62/using-tailwindcss-v3-in-docusaurus-in-5-steps-5c26) and its comments section. I just tried the clean up the info to make it more presentable.
+:::
+
 ## 1. Install dependencies
 
-        ```bash
-        pnpm add tailwindcss postcss autoprefixer
-        ```
+```bash
+pnpm add tailwindcss postcss autoprefixer
+```
 
 ## 2. Add Tailwind CSS config file
 
@@ -67,26 +75,40 @@ module.exports = {
 
 ## 5. Testing
 
-Make a new md file add the contents below
+Make a new mdx file add the contents below
 
 ```md
 # Testing Tailwind
 
-export function Section() {
+Try both light and dark mode.
+
+#### Custom component
+
+export function Tailwinded() {
 return (
 
-<div className="bg-red-500 dark:bg-yellow-500">
-In light, I'm red, a vibrant sight,
+<div className="text-red-500 dark:text-yellow-500">In light, I'm red, a vibrant sight,</div>) }
 
-<br/>
+<Tailwinded />
 
-In darkness, yellow, Tailwind set right!
+#### Plain html
 
-</div>
-)
-}
+<div className="text-red-500 dark:text-yellow-500">In darkness, yellow, Tailwind set right!</div>
+```
+
+## Final
 
 Try both light and dark mode.
 
-<Section />
-```
+#### Custom component
+
+export function Tailwinded() {
+return (
+
+<div className="text-red-500 dark:text-yellow-500">In light, I'm red, a vibrant sight,</div>) }
+
+<Tailwinded />
+
+#### Plain html
+
+<div className="text-red-500 dark:text-yellow-500">In darkness, yellow, Tailwind set right!</div>
