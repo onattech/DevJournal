@@ -2,6 +2,8 @@
 import MDXComponents from "@theme-original/MDXComponents"
 import TerminalWindow from "../components/TerminalWindow"
 import Endpoint from "../components/Endpoint"
+import Tabs from "@theme/Tabs"
+import TabItem from "@theme/TabItem"
 
 export default {
     // Re-use the default mapping
@@ -10,4 +12,6 @@ export default {
     // `SampleEmail` will receive all props that were passed to `sampleEmail` in MDX
     Endpoint,
     TerminalWindow,
+    Tabs,
+    TabItem,
 }
