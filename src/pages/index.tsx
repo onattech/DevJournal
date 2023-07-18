@@ -102,15 +102,15 @@ export default function Home(): JSX.Element {
                             <Column>
                                 <AboutWrapper>
                                     <InfoText>
-                                        I am Onat, a US citizen. I speak English and Turkish fluently and Arabic at an
-                                        acceptable level. I am a full stack Web Developer with network engineering
-                                        background. The stack that I am most comfortable with is React in the frontend
-                                        and Go in the backend.
+                                        I am Onat, a US citizen currently exploring the world. I am a full stack Web
+                                        Developer with network engineering background. The stack that I am most
+                                        comfortable with is React in the frontend and Go in the backend. I am also
+                                        interested in DevOps and documentation with Docusaurus.
                                     </InfoText>
-                                    <InfoText>
+                                    {/* <InfoText>
                                         Currently focusing on improving my skills on Go and learning docker and
                                         kubernetes.
-                                    </InfoText>
+                                    </InfoText> */}
                                     <AboutButtonContainer>
                                         <ButtonAbout rel="noreferrer" target="_blank" href="/resume.pdf">
                                             View Resume{" "}
