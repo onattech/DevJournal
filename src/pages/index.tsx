@@ -194,6 +194,103 @@ export default function Home(): JSX.Element {
                                     </div>
                                 </Column66>
                             </Row>
+
+                            {/* Ecommerce store */}
+                            <Row style={{ marginTop: "50px" }}>
+                                <Column33>
+                                    <ProjectWrapper>
+                                        <ProjectTitle>Ecommerce Store</ProjectTitle>
+                                        <div>
+                                            <p
+                                                style={{
+                                                    textAlign: "left",
+                                                    marginBottom: "0.9375rem",
+                                                    lineHeight: "1.5",
+                                                }}
+                                            >
+                                                This is an Ecommerce store project built with Next.js 13.4, leveraging
+                                                the features of the app router. The project is developed using
+                                                TypeScript. Prisma is utilized as the database toolkit. Tailwind CSS is
+                                                used for styling. Finally it utilizes Stripe integration for the
+                                                checkout process.
+                                            </p>
+                                        </div>
+                                        <ButtonProject
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://store.onatim.com/"
+                                        >
+                                            See Live
+                                        </ButtonProject>
+                                        <ButtonSourceCode
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://github.com/onattech/ecommerce-store"
+                                        >
+                                            Source Code
+                                        </ButtonSourceCode>
+                                    </ProjectWrapper>
+                                </Column33>
+
+                                <Column66>
+                                    <div style={{ margin: "0 auto" }}>
+                                        <div>
+                                            <img alt="Project Image" src="/img/store.png" />
+                                        </div>
+                                    </div>
+                                </Column66>
+                            </Row>
+
+                            {/* Ecommerce store - Admin */}
+                            <Row style={{ marginTop: "50px" }}>
+                                <Column33>
+                                    <ProjectWrapper>
+                                        <ProjectTitle>Ecommerce Store - Admin</ProjectTitle>
+                                        <div>
+                                            <p
+                                                style={{
+                                                    textAlign: "left",
+                                                    marginBottom: "0.9375rem",
+                                                    lineHeight: "1.5",
+                                                }}
+                                            >
+                                                This is the admin dashboard for the Ecommerce store project built with
+                                                Next.js 13.4. It utilizes similar technologies the Store does. It also
+                                                leverages shancn/ui for ui components. It is secured via clerk
+                                                authentication. You may add products, their color, size, cost etc. and
+                                                check order statuses via the comprehensive dashboard.
+                                                <br />
+                                                <br />
+                                                <strong>login email:</strong> admin@example.com
+                                                <br />
+                                                <strong>login password:</strong> admin
+                                            </p>
+                                        </div>
+                                        <ButtonProject
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://store-admin.onatim.com/"
+                                        >
+                                            See Live
+                                        </ButtonProject>
+                                        <ButtonSourceCode
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://github.com/onattech/ecommerce-admin"
+                                        >
+                                            Source Code
+                                        </ButtonSourceCode>
+                                    </ProjectWrapper>
+                                </Column33>
+
+                                <Column66>
+                                    <div style={{ margin: "0 auto" }}>
+                                        <div>
+                                            <img alt="Project Image" src="/img/store-admin.png" />
+                                        </div>
+                                    </div>
+                                </Column66>
+                            </Row>
                         </div>
                     </Container>
                 </Projects>
