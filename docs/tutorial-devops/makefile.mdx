@@ -1,11 +1,15 @@
 ---
 sidebar_position: 1
-draft: true
 ---
 
 # Makefile for project commands
 
 Makefile is very useful to keep all of your project related commands in one place. Here's a sample `Makefile` for a NextJS project.
+
+## Features
+
+-   `make` command scans and lists all commands in the `Makefile`.
+-   Includes examples with confirmation for sensitive operations.
 
 ## Makefile
 
@@ -71,6 +75,34 @@ decrypt-env: ## 🔐 Decrypts the .env.enc file
 	fi
 ```
 
-## Screenshot
+### List example
 
-![Api Key](./img/githash.png)
+<TerminalWindow>
+
+```text
+$ make
+📋 Available commands:
+   • dev                  💠 Starts NextJS dev environment
+   • generate             🧩 Generates prisma files
+   • db-push              📤 Pushes generated prisma files to database
+   • reset                🧨 Resets the database
+   • encrypt-env          🔒 Encrypts the .env file
+   • decrypt-env          🔐 Decrypts the .env.enc file
+$ █
+```
+
+</TerminalWindow>
+
+### Confirmation example
+
+<TerminalWindow>
+
+```text
+$ make reset
+🧨 WARNING: This action will reset the database. Are you sure you want to proceed? [y/N]
+n
+Database reset aborted.
+$ █
+```
+
+</TerminalWindow>
