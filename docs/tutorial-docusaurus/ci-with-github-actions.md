@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
-title: CI with Github Actions
+sidebar_position: 2
+title: Deployment to Github Pages
 ---
 
-# Continuous integration with Github Actions
+# Deployment to Github Pages with Github Actions
 
 Below is a workflow YAML to deploy a Docusaurus site with pnpm to GitHub Pages via GitHub Actions. An action to deploy will be triggered on each push to the main branch.
 
