@@ -2,6 +2,7 @@
 import MDXComponents from "@theme-original/MDXComponents"
 import TerminalWindow from "../components/TerminalWindow"
 import Endpoint from "../components/Endpoint"
+import Resizer from "../components/Resizer"
 import Tabs from "@theme/Tabs"
 import TabItem from "@theme/TabItem"
 
@@ -14,4 +15,5 @@ export default {
     TerminalWindow,
     Tabs,
     TabItem,
+    Resizer,
 }
