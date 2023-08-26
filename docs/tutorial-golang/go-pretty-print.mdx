@@ -1,0 +1,143 @@
+---
+sidebar_position: 1
+---
+
+# GO pretty print
+
+:::info
+Here are some examples on how you may want to pretty print `json` or an `http response`.
+:::
+
+## JSON
+
+### Before Pretty Printing
+
+Given the following struct:
+
+```go
+type Person struct {
+	Name   string `json:"name"`
+	Age    int    `json:"age"`
+	Email  string `json:"email"`
+	Active bool   `json:"active"`
+}
+
+p := Person{
+	Name:   "John Doe",
+	Age:    30,
+	Email:  "john.doe@example.com",
+	Active: true,
+}
+```
+
+If you use the `json.Marshal` method:
+
+```go
+jsonData, err := json.Marshal(p)
+if err != nil {
+	log.Fatal(err)
+}
+fmt.Println(string(jsonData))
+```
+
+The output will be:
+
+```go
+{"name":"John Doe","age":30,"email":"john.doe@example.com","active":true}
+```
+
+### After Pretty Printing
+
+```go
+jsonData, err := json.MarshalIndent(p, "", "    ")
+if err != nil {
+	log.Fatal(err)
+}
+fmt.Println(string(jsonData))
+```
+
+The output will be:
+
+```json
+{
+    "name": "John Doe",
+    "age": 30,
+    "email": "john.doe@example.com",
+    "active": true
+}
+```
+
+## HTTP Request
+
+### Before Pretty Printing
+
+If you were to use the standard `json.Marshal` method:
+
+```go
+jsonData, err := json.Marshal(info)
+if err != nil {
+	log.Fatal(err)
+}
+fmt.Println(string(jsonData))
+```
+
+Given a request to http://localhost:8080/example?query=test with the header User-Agent: MyBrowser and method GET, the output might look something like:
+
+```go
+{"method":"GET","url":"/example?query=test","headers":{"User-Agent":["MyBrowser"]},"host":"localhost:8080","remoteAddr":"[::1]:12345","requestURI":"/example?query=test"}
+```
+
+This is a compact representation that's not very human-readable.
+
+### After Pretty Printing
+
+Using the `printRequestInfo` function which employs `json.MarshalIndent`:
+
+```go
+printRequestInfo(r)
+```
+
+The output will be:
+
+```json
+{
+    "method": "GET",
+    "url": "/example?query=test",
+    "headers": {
+        "User-Agent": ["MyBrowser"]
+    },
+    "host": "localhost:8080",
+    "remoteAddr": "[::1]:12345",
+    "requestURI": "/example?query=test"
+}
+```
+
+Here's the custom `printRequestInfo` function:
+
+```go
+type RequestInfo struct {
+	Method    string      `json:"method"`
+	URL       string      `json:"url"`
+	Header    http.Header `json:"headers"`
+	Host      string      `json:"host"`
+	RemoteAddr string     `json:"remoteAddr"`
+	RequestURI string     `json:"requestURI"`
+}
+
+func printRequestInfo(r *http.Request) {
+	info := RequestInfo{
+		Method:    r.Method,
+		URL:       r.URL.String(),
+		Header:    r.Header,
+		Host:      r.Host,
+		RemoteAddr: r.RemoteAddr,
+		RequestURI: r.RequestURI,
+	}
+
+	jsonData, err := json.MarshalIndent(info, "", "    ")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(string(jsonData))
+}
+```
