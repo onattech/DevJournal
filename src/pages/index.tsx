@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "@theme/Layout"
 import profile from "/img/profile.jpg"
 import dataplane from "/img/dataplane.png"
+import upwork from "/img/upwork1.svg"
 import styled from "styled-components"
 import { createGlobalStyle } from "styled-components"
 
@@ -304,7 +305,19 @@ export default function Home(): JSX.Element {
                     >
                         <Row>
                             <SectionTitle>Contact</SectionTitle>
-                            <form
+                            <div
+                                style={{ display: "flex", alignItems: "center", gap: "20px", justifyContent: "center" }}
+                            >
+                                <h3 style={{ marginBottom: 0 }}>You can find me on</h3>
+                                <a
+                                    rel="noreferrer"
+                                    href="https://www.upwork.com/freelancers/~013e6cfcc8372d13c5"
+                                    target="_blank"
+                                >
+                                    <img src="/img/upwork.svg" alt="upwork logo" height={48} />
+                                </a>
+                            </div>
+                            {/* <form
                                 action="https://formspree.io/xqkyrbrr"
                                 method="POST"
                                 style={{
@@ -367,7 +380,7 @@ export default function Home(): JSX.Element {
                                 >
                                     Submit
                                 </button>
-                            </form>
+                            </form> */}
                         </Row>
                     </Container>
                 </Contact>
