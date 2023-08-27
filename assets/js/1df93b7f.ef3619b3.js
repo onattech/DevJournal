@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[3237],{122:(e,t,i)=>{i.r(t),i.d(t,{GlobalStyle:()=>l,default:()=>m});var r=i(5170),a=i(9183);const n=i.p+"assets/images/profile-5bc73eac6f8211920b1ff8bf5a029047.jpg",o=i.p+"assets/images/dataplane-c22c1910ba039744ea19f0086b455781.png";var d=i(1087),s=i(3010);const l=d.vJ`
+"use strict";(self.webpackChunkdev_journal=self.webpackChunkdev_journal||[]).push([[3237],{122:(e,t,i)=>{i.r(t),i.d(t,{GlobalStyle:()=>l,default:()=>c});var r=i(5170),a=i(9183);const n=i.p+"assets/images/profile-5bc73eac6f8211920b1ff8bf5a029047.jpg",o=i.p+"assets/images/dataplane-c22c1910ba039744ea19f0086b455781.png";var d=i(1087),s=i(3010);const l=d.vJ`
   :root {
     scroll-behavior: smooth;
   }
@@ -18,7 +18,7 @@
   a:visited {
     text-decoration: none;
   }
-`;function m(){r.useLayoutEffect((()=>{document.querySelector('[class*="toggle_"]').style.display="none",document.querySelector("#__docusaurus > div > main").style.opacity="1"}),[]);const[e,t]=r.useState(null);return r.useEffect((()=>{let e=!0;return(async()=>{const i=await fetch("https://api.github.com/repos/dataplane-app/dataplane");await new Promise((e=>setTimeout(e,1e3)));const r=await i.json();e&&t(r.watchers_count)})().catch(console.error),()=>{e=!1}}),[]),(0,s.jsxs)(a.Z,{title:"Onat",description:"My portfoio and dev insights",children:[(0,s.jsx)(l,{}),(0,s.jsxs)("main",{children:[(0,s.jsx)(h,{children:(0,s.jsxs)(p,{children:[(0,s.jsxs)(x,{children:["Hi, my name is ",(0,s.jsx)(c,{children:"Onat"}),(0,s.jsx)("br",{}),"I'm a full-stack Developer."]}),(0,s.jsx)(g,{children:(0,s.jsx)(b,{rel:"noreferrer",href:"#about",children:"Know more"})})]})}),(0,s.jsx)("div",{id:"about",style:{marginTop:"-60px",position:"absolute"}}),(0,s.jsx)(u,{children:(0,s.jsxs)(p,{children:[(0,s.jsx)(j,{children:"About me"}),(0,s.jsxs)(w,{children:[(0,s.jsx)(y,{children:(0,s.jsx)(k,{children:(0,s.jsx)(v,{alt:"Profile Image",height:"auto",width:"300px",src:n})})}),(0,s.jsx)(y,{children:(0,s.jsxs)(P,{children:[(0,s.jsx)(Z,{children:"I am Onat, a US citizen currently exploring the world. I am a full stack Web Developer with network engineering background. The stack that I am most comfortable with is React in the frontend and Go in the backend. I am also interested in DevOps and documentation with Docusaurus."}),(0,s.jsxs)(S,{children:[(0,s.jsxs)(z,{rel:"noreferrer",target:"_blank",href:"/resume.pdf",children:["View Resume"," "]}),(0,s.jsx)(z,{rel:"noreferrer",target:"_blank",style:{marginLeft:"20px"},href:"https://github.com/onattech",children:"Github Profile"})]})]})})]})]})}),(0,s.jsx)(_,{children:(0,s.jsx)(p,{children:(0,s.jsxs)("div",{style:{marginBottom:"9.375rem"},children:[(0,s.jsx)(j,{style:{color:"#272341"},children:"Projects"}),(0,s.jsxs)(w,{children:[(0,s.jsx)(I,{children:(0,s.jsxs)(C,{children:[(0,s.jsxs)(A,{children:["Dataplane (",e," Github \ud83c\udf1f\ufe0fs)"]}),(0,s.jsx)("div",{children:(0,s.jsxs)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:["I have helped build and currently maintaining Dataplane as a full-stack engineer. Dataplane is an open source Airflow inspired data platform to automate, schedule and design data pipelines and workflows written in Go. I am responsible with all things frontend and setting up GraphQL endpoints, writing tests and more in the backend with Go. Check out my"," ",(0,s.jsx)("a",{rel:"noreferrer",href:"https://github.com/dataplane-app/dataplane/graphs/contributors",target:"_blank",children:"contributions."})]})}),(0,s.jsx)(D,{rel:"noreferrer",target:"_blank",href:"https://dataplane.app/",children:"See Live"}),(0,s.jsx)(E,{rel:"noreferrer",target:"_blank",href:"https://github.com/dataplane-app/dataplane",children:"Source Code"})]})}),(0,s.jsx)(T,{children:(0,s.jsx)("div",{style:{margin:"0 auto"},children:(0,s.jsx)("div",{children:(0,s.jsx)("img",{alt:"Project Image",src:o})})})})]}),(0,s.jsxs)(w,{style:{marginTop:"50px"},children:[(0,s.jsx)(I,{children:(0,s.jsxs)(C,{children:[(0,s.jsx)(A,{children:"Ecommerce Store"}),(0,s.jsx)("div",{children:(0,s.jsx)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:"This is an Ecommerce store project built with Next.js 13.4, leveraging the features of the app router. The project is developed using TypeScript. Prisma is utilized as the database toolkit. Tailwind CSS is used for styling. Finally it utilizes Stripe integration for the checkout process."})}),(0,s.jsx)(D,{rel:"noreferrer",target:"_blank",href:"https://store.onatim.com/",children:"See Live"}),(0,s.jsx)(E,{rel:"noreferrer",target:"_blank",href:"https://github.com/onattech/ecommerce-store",children:"Source Code"})]})}),(0,s.jsx)(T,{children:(0,s.jsx)("div",{style:{margin:"0 auto"},children:(0,s.jsx)("div",{children:(0,s.jsx)("img",{alt:"Project Image",src:"/img/store.png"})})})})]}),(0,s.jsxs)(w,{style:{marginTop:"50px"},children:[(0,s.jsx)(I,{children:(0,s.jsxs)(C,{children:[(0,s.jsx)(A,{children:"Ecommerce Store - Admin"}),(0,s.jsx)("div",{children:(0,s.jsxs)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:["This is the admin dashboard for the Ecommerce store project built with Next.js 13.4. It utilizes similar technologies the Store does. It also leverages shancn/ui for ui components. It is secured via clerk authentication. You may add products, their color, size, cost etc. and check order statuses via the comprehensive dashboard.",(0,s.jsx)("br",{}),(0,s.jsx)("br",{}),(0,s.jsx)("strong",{children:"login email:"})," admin@example.com",(0,s.jsx)("br",{}),(0,s.jsx)("strong",{children:"login password:"})," admin"]})}),(0,s.jsx)(D,{rel:"noreferrer",target:"_blank",href:"https://store-admin.onatim.com/",children:"See Live"}),(0,s.jsx)(E,{rel:"noreferrer",target:"_blank",href:"https://github.com/onattech/ecommerce-admin",children:"Source Code"})]})}),(0,s.jsx)(T,{children:(0,s.jsx)("div",{style:{margin:"0 auto"},children:(0,s.jsx)("div",{children:(0,s.jsx)("img",{alt:"Project Image",src:"/img/store-admin.png"})})})})]})]})})}),(0,s.jsx)(G,{children:(0,s.jsx)(p,{style:{maxWidth:"480px"},children:(0,s.jsxs)(w,{children:[(0,s.jsx)(j,{children:"Contact"}),(0,s.jsxs)("form",{action:"https://formspree.io/xqkyrbrr",method:"POST",style:{textAlign:"left",fontSize:"1.3rem"},children:[(0,s.jsx)("label",{htmlFor:"name",style:{display:"inline-block",width:"80px"},children:"Name"}),(0,s.jsx)("input",{type:"text",name:"name",id:"name"}),(0,s.jsx)("br",{}),(0,s.jsx)("label",{htmlFor:"_replyto",style:{marginTop:"10px",display:"inline-block",width:"80px"},children:"Email"}),(0,s.jsx)("input",{type:"email",name:"_replyto",id:"email",style:{marginBottom:"20px"}}),(0,s.jsx)("br",{}),(0,s.jsx)("label",{htmlFor:"textarea",id:"textarealabel",children:"How may I help you?"}),(0,s.jsx)("textarea",{name:"body",style:{width:"100%"},rows:8,cols:50}),(0,s.jsx)("br",{}),(0,s.jsx)("button",{value:"Submit",style:{border:"none",borderRadius:"3px",fontSize:"1rem",marginTop:"10px",padding:"10px",fontFamily:"Montserrat,sans-serif"},children:"Submit"})]})]})})})]})]})}const c=d.ZP.span`
+`;function c(){r.useLayoutEffect((()=>{document.querySelector('[class*="toggle_"]').style.display="none",document.querySelector("#__docusaurus > div > main").style.opacity="1"}),[]);const[e,t]=r.useState(null);return r.useEffect((()=>{let e=!0;return(async()=>{const i=await fetch("https://api.github.com/repos/dataplane-app/dataplane");await new Promise((e=>setTimeout(e,1e3)));const r=await i.json();e&&t(r.watchers_count)})().catch(console.error),()=>{e=!1}}),[]),(0,s.jsxs)(a.Z,{title:"Onat",description:"My portfoio and dev insights",children:[(0,s.jsx)(l,{}),(0,s.jsxs)("main",{children:[(0,s.jsx)(h,{children:(0,s.jsxs)(p,{children:[(0,s.jsxs)(g,{children:["Hi, my name is ",(0,s.jsx)(m,{children:"Onat"}),(0,s.jsx)("br",{}),"I'm a full-stack Developer."]}),(0,s.jsx)(x,{children:(0,s.jsx)(u,{rel:"noreferrer",href:"#about",children:"Know more"})})]})}),(0,s.jsx)("div",{id:"about",style:{marginTop:"-60px",position:"absolute"}}),(0,s.jsx)(b,{children:(0,s.jsxs)(p,{children:[(0,s.jsx)(w,{children:"About me"}),(0,s.jsxs)(j,{children:[(0,s.jsx)(k,{children:(0,s.jsx)(v,{children:(0,s.jsx)(y,{alt:"Profile Image",height:"auto",width:"300px",src:n})})}),(0,s.jsx)(k,{children:(0,s.jsxs)(P,{children:[(0,s.jsx)(Z,{children:"I am Onat, a US citizen currently exploring the world. I am a full stack Web Developer with network engineering background. The stack that I am most comfortable with is React in the frontend and Go in the backend. I am also interested in DevOps and documentation with Docusaurus."}),(0,s.jsxs)(z,{children:[(0,s.jsxs)(S,{rel:"noreferrer",target:"_blank",href:"/resume.pdf",children:["View Resume"," "]}),(0,s.jsx)(S,{rel:"noreferrer",target:"_blank",style:{marginLeft:"20px"},href:"https://github.com/onattech",children:"Github Profile"})]})]})})]})]})}),(0,s.jsx)(_,{children:(0,s.jsx)(p,{children:(0,s.jsxs)("div",{style:{marginBottom:"9.375rem"},children:[(0,s.jsx)(w,{style:{color:"#272341"},children:"Projects"}),(0,s.jsxs)(j,{children:[(0,s.jsx)(I,{children:(0,s.jsxs)(C,{children:[(0,s.jsxs)(D,{children:["Dataplane (",e," Github \ud83c\udf1f\ufe0fs)"]}),(0,s.jsx)("div",{children:(0,s.jsxs)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:["I have helped build and currently maintaining Dataplane as a full-stack engineer. Dataplane is an open source Airflow inspired data platform to automate, schedule and design data pipelines and workflows written in Go. I am responsible with all things frontend and setting up GraphQL endpoints, writing tests and more in the backend with Go. Check out my"," ",(0,s.jsx)("a",{rel:"noreferrer",href:"https://github.com/dataplane-app/dataplane/graphs/contributors",target:"_blank",children:"contributions."})]})}),(0,s.jsx)(G,{rel:"noreferrer",target:"_blank",href:"https://dataplane.app/",children:"See Live"}),(0,s.jsx)(A,{rel:"noreferrer",target:"_blank",href:"https://github.com/dataplane-app/dataplane",children:"Source Code"})]})}),(0,s.jsx)(T,{children:(0,s.jsx)("div",{style:{margin:"0 auto"},children:(0,s.jsx)("div",{children:(0,s.jsx)("img",{alt:"Project Image",src:o})})})})]}),(0,s.jsxs)(j,{style:{marginTop:"50px"},children:[(0,s.jsx)(I,{children:(0,s.jsxs)(C,{children:[(0,s.jsx)(D,{children:"Ecommerce Store"}),(0,s.jsx)("div",{children:(0,s.jsx)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:"This is an Ecommerce store project built with Next.js 13.4, leveraging the features of the app router. The project is developed using TypeScript. Prisma is utilized as the database toolkit. Tailwind CSS is used for styling. Finally it utilizes Stripe integration for the checkout process."})}),(0,s.jsx)(G,{rel:"noreferrer",target:"_blank",href:"https://store.onatim.com/",children:"See Live"}),(0,s.jsx)(A,{rel:"noreferrer",target:"_blank",href:"https://github.com/onattech/ecommerce-store",children:"Source Code"})]})}),(0,s.jsx)(T,{children:(0,s.jsx)("div",{style:{margin:"0 auto"},children:(0,s.jsx)("div",{children:(0,s.jsx)("img",{alt:"Project Image",src:"/img/store.png"})})})})]}),(0,s.jsxs)(j,{style:{marginTop:"50px"},children:[(0,s.jsx)(I,{children:(0,s.jsxs)(C,{children:[(0,s.jsx)(D,{children:"Ecommerce Store - Admin"}),(0,s.jsx)("div",{children:(0,s.jsxs)("p",{style:{textAlign:"left",marginBottom:"0.9375rem",lineHeight:"1.5"},children:["This is the admin dashboard for the Ecommerce store project built with Next.js 13.4. It utilizes similar technologies the Store does. It also leverages shancn/ui for ui components. It is secured via clerk authentication. You may add products, their color, size, cost etc. and check order statuses via the comprehensive dashboard.",(0,s.jsx)("br",{}),(0,s.jsx)("br",{}),(0,s.jsx)("strong",{children:"login email:"})," admin@example.com",(0,s.jsx)("br",{}),(0,s.jsx)("strong",{children:"login password:"})," admin"]})}),(0,s.jsx)(G,{rel:"noreferrer",target:"_blank",href:"https://store-admin.onatim.com/",children:"See Live"}),(0,s.jsx)(A,{rel:"noreferrer",target:"_blank",href:"https://github.com/onattech/ecommerce-admin",children:"Source Code"})]})}),(0,s.jsx)(T,{children:(0,s.jsx)("div",{style:{margin:"0 auto"},children:(0,s.jsx)("div",{children:(0,s.jsx)("img",{alt:"Project Image",src:"/img/store-admin.png"})})})})]})]})})}),(0,s.jsx)(E,{children:(0,s.jsx)(p,{style:{maxWidth:"480px"},children:(0,s.jsxs)(j,{children:[(0,s.jsx)(w,{children:"Contact"}),(0,s.jsxs)("div",{style:{display:"flex",alignItems:"center",gap:"20px",justifyContent:"center"},children:[(0,s.jsx)("h3",{style:{marginBottom:0},children:"You can find me on"}),(0,s.jsx)("a",{rel:"noreferrer",href:"https://www.upwork.com/freelancers/~013e6cfcc8372d13c5",target:"_blank",children:(0,s.jsx)("img",{src:"/img/upwork.svg",alt:"upwork logo",height:48})})]})]})})})]})]})}const m=d.ZP.span`
     background-image: linear-gradient(135deg, #00a6f9 0%, #69cdff 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -66,7 +66,7 @@
     @media (min-width: 1400px) {
         max-width: 1320px;
     }
-`,x=d.ZP.h1`
+`,g=d.ZP.h1`
     visibility: visible;
 
     font-size: 2.1875rem;
@@ -99,7 +99,7 @@
     @media (min-width: 1400px) {
         font-size: 3.5rem;
     }
-`,g=d.ZP.p`
+`,x=d.ZP.p`
     display: flex;
 
     @media (max-width: 992px) {
@@ -126,7 +126,7 @@
         width: 0;
         z-index: -1;
     }
-`,b=(0,d.ZP)(f)`
+`,u=(0,d.ZP)(f)`
     font-size: 1.5rem;
     @media (max-width: 600px) {
         font-size: 1.25rem;
@@ -153,7 +153,7 @@
             width: 100%;
         }
     }
-`,u=d.ZP.section`
+`,b=d.ZP.section`
     padding: 3.125rem 0;
 
     background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
@@ -168,7 +168,7 @@
         clip-path: none;
         height: 100%;
     }
-`,j=d.ZP.h2`
+`,w=d.ZP.h2`
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0 0 2.8125rem;
@@ -177,7 +177,7 @@
     @media (max-width: 600px) {
         font-size: 1.75rem;
     }
-`,w=d.ZP.div`
+`,j=d.ZP.div`
     --bs-gutter-x: 0.9375rem;
     --bs-gutter-y: 0;
     display: flex;
@@ -194,7 +194,7 @@
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         width: 100%;
     }
-`,y=d.ZP.div`
+`,k=d.ZP.div`
     @media (min-width: 576px) {
         flex: 0 0 auto;
         width: 100%;
@@ -204,7 +204,7 @@
         flex: 0 0 auto;
         width: 50%;
     }
-`,k=d.ZP.div`
+`,v=d.ZP.div`
     align-items: center;
     display: flex;
     height: 100%;
@@ -213,7 +213,7 @@
     @media (max-width: 768px) {
         padding-bottom: 4rem;
     }
-`,v=d.ZP.img`
+`,y=d.ZP.img`
     border-radius: 0.5rem !important;
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.375) !important;
     height: auto;
@@ -231,11 +231,11 @@
     @media (max-width: 768px) {
         text-align: center;
     }
-`,S=d.ZP.span`
+`,z=d.ZP.span`
     margin-top: 1rem !important;
 
     display: flex !important;
-`,z=(0,d.ZP)(f)`
+`,S=(0,d.ZP)(f)`
     // border: 2px solid #21243d;
     color: #21243d;
 
@@ -290,12 +290,12 @@
     @media (max-width: 1200px) {
         margin-bottom: 3rem;
     }
-`,A=d.ZP.h3`
+`,D=d.ZP.h3`
     font-size: 1.5625rem;
     font-weight: 700;
     margin-bottom: 1.125rem;
     font-family: Montserrat, sans-serif;
-`,D=(0,d.ZP)(z)`
+`,G=(0,d.ZP)(S)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-image: linear-gradient(135deg, #00a6f9, #69cdff);
@@ -312,12 +312,12 @@
     &:hover {
         -webkit-text-fill-color: #fff;
     }
-`,E=(0,d.ZP)(f)`
+`,A=(0,d.ZP)(f)`
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-image: linear-gradient(135deg, #00a6f9, #69cdff);
     color: transparent;
-`,G=d.ZP.section`
+`,E=d.ZP.section`
     background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #ffffff;
     -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
