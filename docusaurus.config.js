@@ -4,8 +4,9 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require("prism-react-renderer/themes/github")
-const darkCodeTheme = require("prism-react-renderer/themes/dracula")
+import { themes } from "prism-react-renderer"
+const theme = themes.github
+const darkTheme = themes.dracula
 
 require("dotenv").config()
 
@@ -182,8 +183,8 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} Dev Journal. Built with Docusaurus.`,
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                theme,
+                darkTheme,
             },
             algolia: {
                 appId: process.env.ALGOLIA_APP_ID,
@@ -195,4 +196,4 @@ const config = {
         }),
 }
 
-module.exports = config
+export default config

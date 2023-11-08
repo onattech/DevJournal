@@ -30,7 +30,7 @@ jobs:
 
 ## Example output
 
-```json
+```js
 {
   "token": "***",
   "job": "deploy",
