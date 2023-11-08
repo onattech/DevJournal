@@ -53,10 +53,10 @@ const config = {
             defer: true,
             class: "sticky-popup",
         },
-        {
-            src: "https://service.watchthem.live/pixel/b7PJlPZri7r7bAbj",
-            defer: "true",
-        },
+        // {
+        //     src: "https://service.watchthem.live/pixel/b7PJlPZri7r7bAbj",
+        //     defer: "true",
+        // },
     ],
 
     presets: [
