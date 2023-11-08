@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "@theme/Layout"
 import profile from "/img/profile.jpg"
 import dataplane from "/img/dataplane.png"
-import upwork from "/img/upwork1.svg"
 import styled from "styled-components"
 import { createGlobalStyle } from "styled-components"
 
