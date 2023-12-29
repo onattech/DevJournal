@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "@theme/Layout"
 import profile from "/img/profile.jpg"
 import dataplane from "/img/dataplane.png"
+import chest from "/img/chest.png"
 import styled from "styled-components"
 import { createGlobalStyle } from "styled-components"
 
@@ -189,14 +190,67 @@ export default function Home(): JSX.Element {
                                 <Column66>
                                     <div style={{ margin: "0 auto" }}>
                                         <div>
-                                            <img alt="Project Image" src={dataplane} />
+                                            <img
+                                                alt="Project Image"
+                                                src={dataplane}
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
+                                        </div>
+                                    </div>
+                                </Column66>
+                            </Row>
+
+                            {/* Chest */}
+                            <Row style={{ marginTop: "80px" }}>
+                                <Column33>
+                                    <ProjectWrapper>
+                                        <ProjectTitle>Chest Storage Solution</ProjectTitle>
+                                        <div>
+                                            <p
+                                                style={{
+                                                    textAlign: "left",
+                                                    marginBottom: "0.9375rem",
+                                                    lineHeight: "1.5",
+                                                }}
+                                            >
+                                                Chest is a simple and secure file storage service like Dropbox, built
+                                                using Next.js 14. It features easy sign-in with Clerk, a clean interface
+                                                crafted with Shadcn for UI components, and uses Firebase for safekeeping
+                                                files and managing data.
+                                            </p>
+                                        </div>
+                                        <ButtonProject
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://chest.onatim.com/"
+                                        >
+                                            See Live
+                                        </ButtonProject>
+                                        <ButtonSourceCode
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://github.com/onattech/dropchest"
+                                        >
+                                            Source Code
+                                        </ButtonSourceCode>
+                                    </ProjectWrapper>
+                                </Column33>
+
+                                <Column66>
+                                    <div style={{ margin: "0 auto" }}>
+                                        <div>
+                                            <img
+                                                alt="Project Image"
+                                                src={chest}
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
                                         </div>
                                     </div>
                                 </Column66>
                             </Row>
 
                             {/* Ecommerce store */}
-                            <Row style={{ marginTop: "50px" }}>
+                            <Row style={{ marginTop: "80px" }}>
                                 <Column33>
                                     <ProjectWrapper>
                                         <ProjectTitle>Ecommerce Store</ProjectTitle>
@@ -235,14 +289,18 @@ export default function Home(): JSX.Element {
                                 <Column66>
                                     <div style={{ margin: "0 auto" }}>
                                         <div>
-                                            <img alt="Project Image" src="/img/store.png" />
+                                            <img
+                                                alt="Project Image"
+                                                src="/img/store.png"
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
                                         </div>
                                     </div>
                                 </Column66>
                             </Row>
 
                             {/* Ecommerce store - Admin */}
-                            <Row style={{ marginTop: "50px" }}>
+                            <Row style={{ marginTop: "80px" }}>
                                 <Column33>
                                     <ProjectWrapper>
                                         <ProjectTitle>Ecommerce Store - Admin</ProjectTitle>
@@ -286,7 +344,11 @@ export default function Home(): JSX.Element {
                                 <Column66>
                                     <div style={{ margin: "0 auto" }}>
                                         <div>
-                                            <img alt="Project Image" src="/img/store-admin.png" />
+                                            <img
+                                                alt="Project Image"
+                                                src="/img/store-admin.png"
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
                                         </div>
                                     </div>
                                 </Column66>
