@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "@theme/Layout"
 import profile from "/img/profile.jpg"
 import dataplane from "/img/dataplane.png"
+import wipit from "/img/wipit.webp"
+import warehance from "/img/warehance.webp"
 import chest from "/img/chest.png"
 import styled from "styled-components"
 import { createGlobalStyle } from "styled-components"
@@ -148,6 +150,7 @@ export default function Home(): JSX.Element {
                             </SectionTitle>
 
                             {/* <!-- Notice: each .row is a project --> */}
+                            {/* Dataplane */}
                             <Row>
                                 <Column33>
                                     <ProjectWrapper>
@@ -193,6 +196,164 @@ export default function Home(): JSX.Element {
                                             <img
                                                 alt="Project Image"
                                                 src={dataplane}
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
+                                        </div>
+                                    </div>
+                                </Column66>
+                            </Row>
+
+                            {/* Warehance */}
+                            <Row style={{ marginTop: "80px" }}>
+                                <Column33>
+                                    <ProjectWrapper>
+                                        <ProjectTitle>Warehance</ProjectTitle>
+                                        <div>
+                                            <p
+                                                style={{
+                                                    textAlign: "left",
+                                                    marginBottom: "0.9375rem",
+                                                    lineHeight: "1.5",
+                                                }}
+                                            >
+                                                A modern WMS built for growing brands and 3PL's who want to take their
+                                                operations to the next level. I was responsible for all backend
+                                                functionalities using Golang. My key contributions included helping
+                                                building a framework-free REST API, developing a private package for
+                                                generating PDFs used in packing slips and barcodes, crafting a
+                                                comprehensive test suite without external libraries, and assisting in
+                                                DevOps by setting up containers.
+                                            </p>
+                                        </div>
+                                        <ButtonProject
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://www.warehance.com/"
+                                        >
+                                            See Live
+                                        </ButtonProject>
+                                        {/* <ButtonSourceCode
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://github.com/dataplane-app/dataplane"
+                                        >
+                                            Source Code
+                                        </ButtonSourceCode> */}
+                                    </ProjectWrapper>
+                                </Column33>
+
+                                <Column66>
+                                    <div style={{ margin: "0 auto" }}>
+                                        <div>
+                                            <img
+                                                alt="Project Image"
+                                                src={warehance}
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
+                                        </div>
+                                    </div>
+                                </Column66>
+                            </Row>
+
+                            {/* WIPIT */}
+                            <Row style={{ marginTop: "80px" }}>
+                                <Column33>
+                                    <ProjectWrapper>
+                                        <ProjectTitle>Wipit</ProjectTitle>
+                                        <div>
+                                            <p
+                                                style={{
+                                                    textAlign: "left",
+                                                    marginBottom: "0.9375rem",
+                                                    lineHeight: "1.5",
+                                                }}
+                                            >
+                                                Wipit is an advanced platform designed to revolutionize the private
+                                                equity sector by streamlining the deal origination process with use of
+                                                automation and AI. As a full stack developer on this project, I was
+                                                instrumental in developing both the frontend and backend components. In
+                                                the front-end, I helped build a responsive and interactive dashboard.
+                                                Implemented features such as live financial data display, deal tracking,
+                                                and inter-company collaboration tools, enhancing the platform’s
+                                                efficiency and user engagement. In the back-end, I helped develop secure
+                                                and scalable backend services using Nest.js. Integrated various APIs for
+                                                real-time data retrieval and handled complex functionalities like user
+                                                authentication, data security, and compliance with industry standard.
+                                            </p>
+                                        </div>
+                                        <ButtonProject rel="noreferrer" target="_blank" href="https://www.wipit.io/">
+                                            See Live
+                                        </ButtonProject>
+                                        {/* <ButtonSourceCode
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://github.com/dataplane-app/dataplane"
+                                        >
+                                            Source Code
+                                        </ButtonSourceCode> */}
+                                    </ProjectWrapper>
+                                </Column33>
+
+                                <Column66>
+                                    <div style={{ margin: "0 auto" }}>
+                                        <div>
+                                            <img
+                                                alt="Project Image"
+                                                src={wipit}
+                                                style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                                            />
+                                        </div>
+                                    </div>
+                                </Column66>
+                            </Row>
+
+                            {/* Green Cloud Computing */}
+                            <Row style={{ marginTop: "80px" }}>
+                                <Column33>
+                                    <ProjectWrapper>
+                                        <ProjectTitle>Green Cloud Computing</ProjectTitle>
+                                        <div>
+                                            <p
+                                                style={{
+                                                    textAlign: "left",
+                                                    marginBottom: "0.9375rem",
+                                                    lineHeight: "1.5",
+                                                }}
+                                            >
+                                                GreenCloud uses computers powered by renewable energy to execute
+                                                Serverless functions. I developed integration tests for REST API
+                                                endpoints built with goFiber, ensuring they run in a specific order and
+                                                meet the client's requirements.Implemented a solution to run tests in a
+                                                specific order, prioritizing registration activation and login tests.
+                                                Organized endpoints across multiple packages for efficient testing.
+                                                Utilized waitgroups to ensure tests are executed sequentially and in the
+                                                desired order.
+                                            </p>
+                                        </div>
+                                        <ButtonProject
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://www.greencloudcomputing.io/"
+                                        >
+                                            See Live
+                                        </ButtonProject>
+                                        {/* <ButtonSourceCode
+                                            rel="noreferrer"
+                                            target="_blank"
+                                            href="https://github.com/dataplane-app/dataplane"
+                                        >
+                                            Source Code
+                                        </ButtonSourceCode> */}
+                                    </ProjectWrapper>
+                                </Column33>
+
+                                <Column66>
+                                    <div style={{ margin: "0 auto" }}>
+                                        <div>
+                                            <img
+                                                alt="Project Image"
+                                                src="img/green_cloud.png"
+                                                height={500}
                                                 style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
                                             />
                                         </div>
@@ -250,7 +411,7 @@ export default function Home(): JSX.Element {
                             </Row>
 
                             {/* Ecommerce store */}
-                            <Row style={{ marginTop: "80px" }}>
+                            {/* <Row style={{ marginTop: "80px" }}>
                                 <Column33>
                                     <ProjectWrapper>
                                         <ProjectTitle>Ecommerce Store</ProjectTitle>
@@ -297,10 +458,10 @@ export default function Home(): JSX.Element {
                                         </div>
                                     </div>
                                 </Column66>
-                            </Row>
+                            </Row> */}
 
                             {/* Ecommerce store - Admin */}
-                            <Row style={{ marginTop: "80px" }}>
+                            {/* <Row style={{ marginTop: "80px" }}>
                                 <Column33>
                                     <ProjectWrapper>
                                         <ProjectTitle>Ecommerce Store - Admin</ProjectTitle>
@@ -352,7 +513,7 @@ export default function Home(): JSX.Element {
                                         </div>
                                     </div>
                                 </Column66>
-                            </Row>
+                            </Row> */}
                         </div>
                     </Container>
                 </Projects>
