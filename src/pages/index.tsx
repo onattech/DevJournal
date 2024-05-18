@@ -163,11 +163,11 @@ export default function Home(): JSX.Element {
                                                     lineHeight: "1.5",
                                                 }}
                                             >
-                                                I have helped build and currently maintaining Dataplane as a full-stack
-                                                engineer. Dataplane is an open source Airflow inspired data platform to
-                                                automate, schedule and design data pipelines and workflows written in
-                                                Go. I am responsible with all things frontend and setting up GraphQL
-                                                endpoints, writing tests and more in the backend with Go. Check out my{" "}
+                                                I have helped build Dataplane as a full-stack engineer. Dataplane is an
+                                                open source Airflow inspired data platform to automate, schedule and
+                                                design data pipelines and workflows written in Go. I am responsible with
+                                                all things frontend and setting up GraphQL endpoints, writing tests and
+                                                more in the backend with Go. Check out my{" "}
                                                 <a
                                                     rel="noreferrer"
                                                     href="https://github.com/dataplane-app/dataplane/graphs/contributors"
