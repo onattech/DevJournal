@@ -17,10 +17,10 @@
     "index-search": "docker run -it --env-file=.env -e \"CONFIG=$(cat ./config.json | jq -r tostring)\" algolia/docsearch-scraper"
   },
   "dependencies": {
-    "@docusaurus/core": "3.3.2",
-    "@docusaurus/preset-classic": "3.3.2",
-    "@docusaurus/theme-classic": "^3.3.2",
-    "@docusaurus/theme-search-algolia": "^3.0.1",
+    "@docusaurus/core": "3.4.0",
+    "@docusaurus/preset-classic": "3.4.0",
+    "@docusaurus/theme-classic": "^3.4.0",
+    "@docusaurus/theme-search-algolia": "^3.4.0",
     "@emailjs/browser": "^3.11.0",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
@@ -39,9 +39,9 @@
     "types@latest": "link:docusaurus/types@latest"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.3.2",
-    "@docusaurus/tsconfig": "3.3.2",
-    "@docusaurus/types": "3.0.1",
+    "@docusaurus/module-type-aliases": "3.4.0",
+    "@docusaurus/tsconfig": "3.4.0",
+    "@docusaurus/types": "3.4.0",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "typescript": "~5.2.2"
