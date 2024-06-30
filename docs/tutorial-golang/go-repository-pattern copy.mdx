@@ -1,0 +1,94 @@
+---
+sidebar_position: 6
+---
+
+# Design patterns with GO
+
+## Factory pattern
+
+The Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created. It helps in promoting loose coupling by reducing the need to bind application-specific classes into the code.
+
+### Benefits of the Factory Pattern
+
+-   **Encapsulation**: The creation logic is encapsulated in the factory function, making the code easier to maintain and extend.
+-   **Flexibility**: It provides flexibility in object creation. If the creation logic changes, only the factory function needs to be updated, not the entire codebase.
+-   **Decoupling**: It promotes loose coupling by reducing dependencies between components.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+
+	"github.com/google/uuid"
+)
+
+// User is the type for all user accounts.
+type User struct {
+	ID       string
+	Username string
+	Email    string
+	JoinedAt time.Time
+	Status   string
+}
+
+// NewUser is the factory function that creates a new User instance with sensible defaults.
+func NewUser(username, email string) *User {
+	return &User{
+		ID:       uuid.New().String(),
+		Username: username,
+		Email:    email,
+		JoinedAt: time.Now(),
+		Status:   "active", // default status
+	}
+}
+
+func main() {
+	// Use the factory function to create new Users.
+	user1 := NewUser("john_doe", "john@example.com")
+	user2 := NewUser("jane_smith", "jane@example.com")
+
+	// Print out the results in a nicely formatted way.
+	printUser(user1)
+	printUser(user2)
+}
+
+// printUser prints the details of a User in a nicely formatted way.
+func printUser(user *User) {
+	fmt.Printf("User Details:\n")
+	fmt.Printf("ID:        %s\n", user.ID)
+	fmt.Printf("Username:  %s\n", user.Username)
+	fmt.Printf("Email:     %s\n", user.Email)
+	fmt.Printf("JoinedAt:  %s\n", user.JoinedAt.Format(time.RFC1123))
+	fmt.Printf("Status:    %s\n", user.Status)
+	fmt.Println("----------------------------")
+}
+```
+
+### Output
+
+<TerminalWindow>
+
+```text {1}
+~ go run main.go
+
+User Details:
+ID:        89019289-69bc-4154-91a1-62332a884ea3
+Username:  john_doe
+Email:     john@example.com
+JoinedAt:  Sun, 30 Jun 2024 12:34:15 +04
+Status:    active
+----------------------------
+
+User Details:
+ID:        9a9c71b2-dfb4-4568-a492-e3f0c75cf2b8
+Username:  jane_smith
+Email:     jane@example.com
+JoinedAt:  Sun, 30 Jun 2024 12:34:15 +04
+Status:    active
+----------------------------
+$ █
+```
+
+</TerminalWindow>
