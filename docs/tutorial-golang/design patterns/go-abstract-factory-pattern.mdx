@@ -1,0 +1,450 @@
+---
+sidebar_position: 2
+draft: false
+---
+
+# Abstract Factory Pattern
+
+The Abstract Factory pattern provides a way to create related objects without specifying their concrete classes.
+This is useful in situations where we want to create objects based on a certain theme or context. Let's explore how the Abstract Factory pattern can help us implement a UI themes feature in a clean, extensible way.
+
+### The Problem: Implementing UI Themes Without a Pattern
+
+First, let's look at a naive implementation without using the Abstract Factory pattern:
+
+<Tabs>
+    <TabItem value="base" label="Base" default>
+    ```go
+    package main
+
+    import "fmt"
+
+    type Button struct {
+        backgroundColor string
+        textColor       string
+    }
+
+    type Window struct {
+        backgroundColor string
+    }
+
+    func createLightThemeButton() *Button {
+        return &Button{
+            backgroundColor: "white",
+            textColor:       "black",
+        }
+    }
+
+    func createDarkThemeButton() *Button {
+        return &Button{
+            backgroundColor: "black",
+            textColor:       "white",
+        }
+    }
+
+    func createLightThemeWindow() *Window {
+        return &Window{
+            backgroundColor: "light-gray",
+        }
+    }
+
+    func createDarkThemeWindow() *Window {
+        return &Window{
+            backgroundColor: "dark-gray",
+        }
+    }
+
+    func main() {
+        // Create light theme UI
+        lightButton := createLightThemeButton()
+        lightWindow := createLightThemeWindow()
+        fmt.Printf("Light Theme - Button: %+v, Window: %+v\n", lightButton, lightWindow)
+
+        // Create dark theme UI
+        darkButton := createDarkThemeButton()
+        darkWindow := createDarkThemeWindow()
+        fmt.Printf("Dark Theme - Button: %+v, Window: %+v\n", darkButton, darkWindow)
+    }
+    ```
+    </TabItem>
+    <TabItem value="theme" label="Additional theme">
+
+    ```go {3-8,10-14,27-30}
+    // Existing functions...
+
+    func createSystemThemeButton() *Button {
+        return &Button{
+            backgroundColor: "yellow",
+            textColor:       "black",
+        }
+    }
+
+    func createSystemThemeWindow() *Window {
+        return &Window{
+            backgroundColor: "white",
+        }
+    }
+
+    func main() {
+        // Create light theme UI
+        lightButton := createLightThemeButton()
+        lightWindow := createLightThemeWindow()
+        fmt.Printf("Light Theme - Button: %+v, Window: %+v\n", lightButton, lightWindow)
+
+        // Create dark theme UI
+        darkButton := createDarkThemeButton()
+        darkWindow := createDarkThemeWindow()
+        fmt.Printf("Dark Theme - Button: %+v, Window: %+v\n", darkButton, darkWindow)
+
+        // New Create system theme UI
+        systemButton := createSystemThemeButton()
+        systemWindow := createSystemThemeWindow()
+        fmt.Printf("System Theme - Button: %+v, Window: %+v\n", systemButton, systemWindow)
+    }
+    ```
+    </TabItem>
+    <TabItem value="element" label="Additional element">
+
+    ```go {}
+    package main
+
+    import "fmt"
+
+    type Button struct {
+        backgroundColor string
+        textColor       string
+    }
+
+    type Window struct {
+        backgroundColor string
+    }
+
+    type Dropdown struct {
+        backgroundColor string
+        textColor       string
+        borderColor     string
+    }
+
+    // Existing functions...
+
+    func createHighContrastThemeButton() *Button {
+        return &Button{
+            backgroundColor: "yellow",
+            textColor:       "black",
+        }
+    }
+
+    func createHighContrastThemeWindow() *Window {
+        return &Window{
+            backgroundColor: "white",
+        }
+    }
+
+    func createLightThemeDropdown() *Dropdown {
+        return &Dropdown{
+            backgroundColor: "white",
+            textColor:       "black",
+            borderColor:     "gray",
+        }
+    }
+
+    func createDarkThemeDropdown() *Dropdown {
+        return &Dropdown{
+            backgroundColor: "black",
+            textColor:       "white",
+            borderColor:     "light-gray",
+        }
+    }
+
+    func createHighContrastThemeDropdown() *Dropdown {
+        return &Dropdown{
+            backgroundColor: "yellow",
+            textColor:       "black",
+            borderColor:     "black",
+        }
+    }
+
+    func main() {
+        // Create light theme UI
+        lightButton := createLightThemeButton()
+        lightWindow := createLightThemeWindow()
+        lightDropdown := createLightThemeDropdown()
+        fmt.Printf("Light Theme - Button: %+v, Window: %+v, Dropdown: %+v\n", lightButton, lightWindow, lightDropdown)
+
+        // Create dark theme UI
+        darkButton := createDarkThemeButton()
+        darkWindow := createDarkThemeWindow()
+        darkDropdown := createDarkThemeDropdown()
+        fmt.Printf("Dark Theme - Button: %+v, Window: %+v, Dropdown: %+v\n", darkButton, darkWindow, darkDropdown)
+
+        // Create high contrast theme UI
+        highContrastButton := createHighContrastThemeButton()
+        highContrastWindow := createHighContrastThemeWindow()
+        highContrastDropdown := createHighContrastThemeDropdown()
+        fmt.Printf("High Contrast Theme - Button: %+v, Window: %+v, Dropdown: %+v\n", highContrastButton, highContrastWindow, highContrastDropdown)
+    }
+
+    ```
+
+    </TabItem>
+
+</Tabs>
+
+This approach works, but it has several drawbacks:
+
+1. **Violation of Open-Closed Principle (OCP):** If we want to add a new theme (e.g., system), we need to modify existing code, adding new functions for each UI element.
+2. **Lack of Cohesion:** The theme-specific logic is spread across multiple functions, making it harder to maintain and update consistently.
+3. **Difficult to Extend:** Adding new UI elements (e.g., a Dropdown) requires adding new functions for each theme.
+4. **No Guarantee of Consistency:** There's no mechanism ensuring that all UI elements for a theme are created together, potentially leading to mixed themes.
+
+### The Solution: Abstract Factory Pattern
+
+Now, let's refactor this using the Abstract Factory pattern:
+
+<Tabs>
+    <TabItem value="base" label="Base" default>
+        ```go
+        package main
+
+        import "fmt"
+
+        // UIFactory is our abstract factory interface
+        type UIFactory interface {
+            CreateButton() Button
+            CreateWindow() Window
+        }
+
+        // Button interface
+        type Button interface {
+            Render() string
+        }
+
+        // Window interface
+        type Window interface {
+            Render() string
+        }
+
+        // LightThemeFactory concrete factory
+        type LightThemeFactory struct{}
+
+        func (f LightThemeFactory) CreateButton() Button {
+            return LightButton{}
+        }
+
+        func (f LightThemeFactory) CreateWindow() Window {
+            return LightWindow{}
+        }
+
+        // DarkThemeFactory concrete factory
+        type DarkThemeFactory struct{}
+
+        func (f DarkThemeFactory) CreateButton() Button {
+            return DarkButton{}
+        }
+
+        func (f DarkThemeFactory) CreateWindow() Window {
+            return DarkWindow{}
+        }
+
+        // Light theme concrete products
+        type LightButton struct{}
+
+        func (b LightButton) Render() string {
+            return "Rendering light theme button"
+        }
+
+        type LightWindow struct{}
+
+        func (w LightWindow) Render() string {
+            return "Rendering light theme window"
+        }
+
+        // Dark theme concrete products
+        type DarkButton struct{}
+
+        func (b DarkButton) Render() string {
+            return "Rendering dark theme button"
+        }
+
+        type DarkWindow struct{}
+
+        func (w DarkWindow) Render() string {
+            return "Rendering dark theme window"
+        }
+
+        func createUI(factory UIFactory) {
+            button := factory.CreateButton()
+            window := factory.CreateWindow()
+            fmt.Println(button.Render())
+            fmt.Println(window.Render())
+        }
+
+        func main() {
+            lightFactory := LightThemeFactory{}
+            darkFactory := DarkThemeFactory{}
+
+            fmt.Println("Creating Light Theme UI:")
+            createUI(lightFactory)
+
+            fmt.Println("\nCreating Dark Theme UI:")
+            createUI(darkFactory)
+        }
+
+        ```
+    </TabItem>
+    <TabItem value="theme" label="Additional theme">
+
+    Adding a new theme is straight forward. We only need to add a similar factory with its methods and concrete products. Rest of the logic doesn't change.
+
+        ```go {31,39,40}
+        //... other factories above
+        //... other concrete types above
+
+        // New SystemThemeFactory
+        type SystemThemeFactory struct{}
+
+        func (f SystemThemeFactory) CreateButton() Button {
+            return SystemButton{}
+        }
+
+        func (f SystemThemeFactory) CreateWindow() Window {
+            return SystemWindow{}
+        }
+
+        // New System theme concrete products
+        type SystemButton struct{}
+
+        func (b SystemButton) Render() string {
+            return "Rendering system theme button"
+        }
+
+        type SystemWindow struct{}
+
+        func (w SystemWindow) Render() string {
+            return "Rendering system theme window"
+        }
+
+        func main() {
+            lightFactory := LightThemeFactory{}
+            darkFactory := DarkThemeFactory{}
+            systemFactory := SystemThemeFactory{} // New line
+
+            fmt.Println("Creating Light Theme UI:")
+            createUI(lightFactory)
+
+            fmt.Println("\nCreating Dark Theme UI:")
+            createUI(darkFactory)
+
+            fmt.Println("\nCreating System Theme UI:") // New block
+            createUI(systemFactory)
+        }
+        ```
+    </TabItem>
+    <TabItem value="element" label="Additional element">
+
+        ```go {7,13-15,28-30,34-36,40-42,46,48-50,52,54-56,58,60-62,67,70}
+        //...
+
+        // Update UIFactory interface
+        type UIFactory interface {
+            CreateButton() Button
+            CreateWindow() Window
+            CreateDropdown() Dropdown  // New method
+        }
+
+        // Existing Button and Window interfaces...
+
+        // New Dropdown interface
+        type Dropdown interface {
+            Render() string
+        }
+
+        // Update LightThemeFactory
+        type LightThemeFactory struct{}
+
+        func (f LightThemeFactory) CreateButton() Button {
+            return LightButton{}
+        }
+
+        func (f LightThemeFactory) CreateWindow() Window {
+            return LightWindow{}
+        }
+
+        func (f LightThemeFactory) CreateDropdown() Dropdown { // New method
+            return LightDropdown{}
+        }
+
+        // Update DarkThemeFactory similarly...
+        // ...
+        func (f DarkThemeFactory) CreateDropdown() Dropdown { // New method
+            return DarkDropdown{}
+        }
+
+        // Update SystemThemeFactory similarly
+        // ...
+        func (f SystemThemeFactory) CreateDropdown() Dropdown { // New method
+            return SystemDropdown{}
+        }
+
+        // Existing Light and Dark theme concrete products...
+        // New Dropdown concrete products for existing themes
+        type LightDropdown struct{}
+
+        func (d LightDropdown) Render() string {
+            return "Rendering light theme dropdown"
+        }
+
+        type DarkDropdown struct{}
+
+        func (d DarkDropdown) Render() string {
+            return "Rendering dark theme dropdown"
+        }
+
+        type SystemDropdown struct{}
+
+        func (d SystemDropdown) Render() string {
+            return "Rendering system theme dropdown"
+        }
+
+        func createUI(factory UIFactory) {
+            button := factory.CreateButton()
+            window := factory.CreateWindow()
+            dropdown := factory.CreateDropdown()  // New line
+            fmt.Println(button.Render())
+            fmt.Println(window.Render())
+            fmt.Println(dropdown.Render())  // New line
+        }
+
+        // No change required for the main function
+        func main() {
+            lightFactory := LightThemeFactory{}
+            darkFactory := DarkThemeFactory{}
+            systemFactory := SystemThemeFactory{}
+
+            fmt.Println("Creating Light Theme UI:")
+            createUI(lightFactory)
+
+            fmt.Println("\nCreating Dark Theme UI:")
+            createUI(darkFactory)
+
+            fmt.Println("\nCreating System Theme UI:")
+            createUI(systemFactory)
+        }
+        ```
+    </TabItem>
+
+</Tabs>
+
+### Benefits of the Abstract Factory Pattern
+
+1. **Adheres to Open-Closed Principle (OCP):** We can add new themes (e.g., SystemThemeFactory) without modifying existing code. The system is open for extension but closed for modification.
+2. **Ensures Consistency:** All UI elements for a theme are created by the same factory, guaranteeing a consistent look.
+3. **Easy to Extend:** Adding new UI elements (e.g., Dropdown) only requires updating the UIFactory interface and concrete factories, not the client code.
+4. **Separation of Concerns:** Theme-specific logic is encapsulated within each concrete factory and product, making the code more organized and maintainable.
+5. **Flexibility:** Client code (createUI function) works with abstractions, making it easy to switch themes or even allow runtime theme switching.
+
+### Conclusion
+
+The Abstract Factory pattern provides a robust solution for creating families of related objects, such as UI elements with consistent theming. By using this pattern, we've created a system that's easier to maintain, extend, and keeps our code adherent to important design principles like the Open-Closed Principle.
+
+This approach not only solves our immediate problem of supporting multiple UI themes but also sets us up for future extensibility. Whether we need to add new themes, new UI elements, or even support dynamic theme switching, our Abstract Factory implementation provides a solid foundation for these enhancements.
